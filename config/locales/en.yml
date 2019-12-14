@@ -30,4 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_name: "Rails 6 Starter App"
+  meta_description: "An opinionated starter application based on Ruby 2.7, Rails 6.0, Webpack 4, Yarn, and Bootstrap 4"
+  shared:
+    navbar:
+      toggle_navigation: "Toggle Navigation"
