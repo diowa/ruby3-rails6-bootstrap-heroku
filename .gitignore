@@ -12,6 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+!/tmp/pids/.keep
 
 # Ignore uploaded files in development.
 /storage/*
@@ -29,3 +30,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+/coverage/*
+/spec/examples.txt
