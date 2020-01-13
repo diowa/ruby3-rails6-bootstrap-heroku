@@ -8299,8 +8299,9 @@ stylelint-scss@^3.13.0:
     postcss-value-parser "^4.0.2"
 
 stylelint-webpack-plugin@tagliala/stylelint-webpack-plugin#global-refresh:
-  version "0.12.0"
-  resolved "https://codeload.github.com/tagliala/stylelint-webpack-plugin/tar.gz/fa3456b6769a30988c42c36e0243473685bd687a"
+  version "0.13.0"
+  uid "0ef14bd1cdb84b6d6efc529f65610d794328c3ba"
+  resolved "https://codeload.github.com/tagliala/stylelint-webpack-plugin/tar.gz/0ef14bd1cdb84b6d6efc529f65610d794328c3ba"
   dependencies:
     arrify "^2.0.1"
     micromatch "^4.0.2"
