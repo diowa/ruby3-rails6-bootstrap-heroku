@@ -34,6 +34,8 @@ module Ruby2Rails6BootstrapHeroku
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.available_locales = %i[it en]
+
     config.generators do |g|
       g.test_framework  false
       g.stylesheets     false
