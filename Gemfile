@@ -13,7 +13,7 @@ gem 'pg', '~> 1.2'
 gem 'puma', '~> 4.3'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.2'
+gem 'webpacker', '~> 5.0'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2'
@@ -31,13 +31,13 @@ group :development, :test do
   gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 5.1'
   gem 'faker', '~> 2.10'
-  gem 'pry', '~> 0.12.2'
-  gem 'pry-byebug', '~> 3.8'
+  gem 'pry', '~> 0.13.0'
+  gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 3.9'
   gem 'rubocop', '~> 0.80.1', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
-  gem 'rubocop-rails', '~> 2.4', require: false
+  gem 'rubocop-rails', '~> 2.5', require: false
   gem 'rubocop-rspec', '~> 1.38', require: false
   gem 'slim_lint', '~> 0.20.0', require: false
 end
