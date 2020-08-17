@@ -14,7 +14,7 @@
     "@rails/actioncable": "^6.0.3",
     "@rails/activestorage": "^6.0.3",
     "@rails/ujs": "^6.0.3",
-    "@rails/webpacker": "^5.1.1",
+    "@rails/webpacker": "^5.2.0",
     "bootstrap": "^4.5.2",
     "exports-loader": "^1.1.0",
     "jquery": "^3.5.1",
