@@ -8,7 +8,7 @@
 This is an opinionated starter web application based on the following technology stack:
 
 * [Ruby 2.7.2][1]
-* [Rails 6.0.3.4][2]
+* [Rails 6.1.0][2]
 * [Webpack 4][15]
 * [Yarn][16]
 * [Puma][3]
