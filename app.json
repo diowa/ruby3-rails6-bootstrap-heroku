@@ -1,11 +1,11 @@
 {
   "name": "Rails 6 Starter App",
-  "description": "An opinionated starter application based on Ruby 3.0, Rails 6.1, Webpack 4, Yarn, and Bootstrap 4",
+  "description": "An opinionated starter application based on Ruby 3.0, Rails 6.1, Webpack 4, Yarn, and Bootstrap 5",
   "keywords": [
     "Ruby 3.0",
     "Rails 6.1",
     "Webpack 4",
-    "Bootstrap 4",
+    "Bootstrap 5",
     "Font Awesome 5"
   ],
   "website": "https://ruby3-rails6-bootstrap-heroku.herokuapp.com/",
