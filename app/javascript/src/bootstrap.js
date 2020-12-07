@@ -1,11 +1,25 @@
-import 'bootstrap/js/dist/util'
-import 'bootstrap/js/dist/alert'
-import 'bootstrap/js/dist/button'
-import 'bootstrap/js/dist/carousel'
-import 'bootstrap/js/dist/collapse'
-import 'bootstrap/js/dist/dropdown'
-import 'bootstrap/js/dist/modal'
-import 'bootstrap/js/dist/popover'
-import 'bootstrap/js/dist/scrollspy'
-import 'bootstrap/js/dist/tab'
-import 'bootstrap/js/dist/tooltip'
+import Alert from 'bootstrap/js/src/alert'
+import Button from 'bootstrap/js/src/button'
+import Carousel from 'bootstrap/js/src/carousel'
+import Collapse from 'bootstrap/js/src/collapse'
+import Dropdown from 'bootstrap/js/src/dropdown'
+import Modal from 'bootstrap/js/src/modal'
+import Popover from 'bootstrap/js/src/popover'
+import ScrollSpy from 'bootstrap/js/src/scrollspy'
+import Tab from 'bootstrap/js/src/tab'
+import Toast from 'bootstrap/js/src/toast'
+import Tooltip from 'bootstrap/js/src/tooltip'
+
+export {
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Popover,
+  ScrollSpy,
+  Tab,
+  Toast,
+  Tooltip
+}
