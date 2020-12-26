@@ -6,7 +6,7 @@ services:
   - postgresql
 
 rvm:
-  - 2.7.2
+  - 3.0.0
 
 addons:
   chrome: stable
@@ -32,4 +32,4 @@ before_install:
   - unzip chromedriver_linux64.zip -d ~/bin
 
 before_script:
-  - psql -c 'create database "ruby2_rails6_bootstrap_heroku_test";' -U postgres
+  - psql -c 'create database "ruby3_rails6_bootstrap_heroku_test";' -U postgres

@@ -1,15 +1,15 @@
 {
   "name": "Rails 6 Starter App",
-  "description": "An opinionated starter application based on Ruby 2.7, Rails 6.1, Webpack 4, Yarn, and Bootstrap 4",
+  "description": "An opinionated starter application based on Ruby 3.0, Rails 6.1, Webpack 4, Yarn, and Bootstrap 4",
   "keywords": [
-    "Ruby 2.7",
+    "Ruby 3.0",
     "Rails 6.1",
     "Webpack 4",
     "Bootstrap 4",
     "Font Awesome 5"
   ],
-  "website": "https://ruby2-rails6-bootstrap-heroku.herokuapp.com/",
-  "repository": "https://github.com/diowa/ruby2-rails6-bootstrap-heroku",
+  "website": "https://ruby3-rails6-bootstrap-heroku.herokuapp.com/",
+  "repository": "https://github.com/diowa/ruby3-rails6-bootstrap-heroku",
   "success_url": "/",
   "scripts": {
     "postdeploy": "bundle exec rails db:schema:load db:seed"

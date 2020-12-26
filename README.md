@@ -1,13 +1,13 @@
 # Rails 6 Starter App
-[![Build Status](https://travis-ci.org/diowa/ruby2-rails6-bootstrap-heroku.svg?branch=master)](https://travis-ci.org/diowa/ruby2-rails6-bootstrap-heroku)
-[![Code Climate](https://codeclimate.com/github/diowa/ruby2-rails6-bootstrap-heroku/badges/gpa.svg)](https://codeclimate.com/github/diowa/ruby2-rails6-bootstrap-heroku)
-[![Coverage Status](https://coveralls.io/repos/github/diowa/ruby2-rails6-bootstrap-heroku/badge.svg?branch=master)](https://coveralls.io/github/diowa/ruby2-rails6-bootstrap-heroku?branch=master)
+[![Build Status](https://travis-ci.org/diowa/ruby3-rails6-bootstrap-heroku.svg?branch=master)](https://travis-ci.org/diowa/ruby3-rails6-bootstrap-heroku)
+[![Code Climate](https://codeclimate.com/github/diowa/ruby3-rails6-bootstrap-heroku/badges/gpa.svg)](https://codeclimate.com/github/diowa/ruby3-rails6-bootstrap-heroku)
+[![Coverage Status](https://coveralls.io/repos/github/diowa/ruby3-rails6-bootstrap-heroku/badge.svg?branch=master)](https://coveralls.io/github/diowa/ruby3-rails6-bootstrap-heroku?branch=master)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This is an opinionated starter web application based on the following technology stack:
 
-* [Ruby 2.7.2][1]
+* [Ruby 3.0.0][1]
 * [Rails 6.1.0][2]
 * [Webpack 4][15]
 * [Yarn][16]
@@ -39,7 +39,7 @@ This is an opinionated starter web application based on the following technology
 [16]: https://yarnpkg.com/lang/en/
 [17]: https://github.com/backus/rubocop-rspec
 
-Starter App is deployable on [Heroku](https://www.heroku.com/). Demo: https://ruby2-rails6-bootstrap-heroku.herokuapp.com/
+Starter App is deployable on [Heroku](https://www.heroku.com/). Demo: https://ruby3-rails6-bootstrap-heroku.herokuapp.com/
 
 ```Gemfile``` also contains a set of useful gems for performance, security, api building...
 
@@ -71,7 +71,7 @@ This application supports fast setup and deploy via [app.json](https://devcenter
 $ curl -n -X POST https://api.heroku.com/app-setups \
 -H "Content-Type:application/json" \
 -H "Accept:application/vnd.heroku+json; version=3" \
--d '{"source_blob": { "url":"https://github.com/diowa/ruby2-rails6-bootstrap-heroku/tarball/master/"} }'
+-d '{"source_blob": { "url":"https://github.com/diowa/ruby3-rails6-bootstrap-heroku/tarball/master/"} }'
 ```
 
 More information: [Setting Up Apps using the Platform API](https://devcenter.heroku.com/articles/setting-up-apps-using-the-heroku-platform-api)
