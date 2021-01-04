@@ -13,7 +13,7 @@ gem 'pg', '~> 1.2'
 gem 'puma', '~> 5.1'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.2'
+gem 'webpacker', '~> 5.2', '>= 5.2.1'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2'
@@ -22,19 +22,19 @@ gem 'turbolinks', '~> 5.2'
 gem 'bootsnap', '~> 1.5', require: false
 
 # Template Engine
-gem 'slim-rails', '~> 3.2'
+gem 'slim-rails', '~> 3.2', '>= 3.2.0'
 
 # App monitoring
 gem 'newrelic_rpm', '~> 6.14'
 
 group :development, :test do
   gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails', '~> 6.1'
+  gem 'factory_bot_rails', '~> 6.1', '>= 6.1.0'
   gem 'faker', '~> 2.15'
   gem 'pry', '~> 0.13.1'
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
   gem 'rubocop', '~> 1.7', require: false
   gem 'rubocop-performance', '~> 1.9', require: false
   gem 'rubocop-rails', '~> 2.9', require: false
@@ -47,11 +47,11 @@ group :development do
   gem 'spring', '~> 2.1'
   gem 'spring-commands-rspec', '~> 1.0'
   gem 'spring-watcher-listen', '~> 2.0'
-  gem 'web-console', '~> 4.1'
+  gem 'web-console', '~> 4.1', '>= 4.1.0'
 end
 
 group :test do
-  gem 'capybara', '~> 3.34'
+  gem 'capybara', '~> 3.34', '>= 3.34.0'
   gem 'coveralls_reborn', '~> 0.19.0', require: false
   gem 'email_spec', '~> 2.2'
   gem 'selenium-webdriver', '~> 3.142'
