@@ -44,5 +44,7 @@ module Ruby3Rails6BootstrapHeroku
                        request_specs: false,
                        controller_specs: false
     end
+
+    config.active_record.schema_format = :sql
   end
 end
