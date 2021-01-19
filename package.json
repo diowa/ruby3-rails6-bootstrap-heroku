@@ -15,7 +15,7 @@
     "@rails/activestorage": "6.1.1",
     "@rails/ujs": "6.1.1",
     "@rails/webpacker": "^5.2.1",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "exports-loader": "^1.1.1",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "standard": "^16.0.3",
     "standard-loader": "^7.0.0",
-    "stylelint": "^13.8.0",
+    "stylelint": "^13.9.0",
     "stylelint-config-twbs-bootstrap": "^2.1.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
