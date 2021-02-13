@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
-gem 'rails', '6.1.2'
+gem 'rails', '6.1.2.1'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.2'
@@ -30,7 +30,7 @@ gem 'newrelic_rpm', '~> 6.15'
 group :development, :test do
   gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.1'
-  gem 'faker', '~> 2.15'
+  gem 'faker', '~> 2.16'
   gem 'pry', '~> 0.13.1'
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
