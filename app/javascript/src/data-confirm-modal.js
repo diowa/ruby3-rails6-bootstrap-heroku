@@ -52,7 +52,7 @@
 
   let settings
 
-  window.dataConfirmModal = {
+  const dataConfirmModal = {
     setDefaults (newSettings) {
       settings = $.extend(settings, newSettings)
     },
@@ -93,15 +93,15 @@
 
   // Detect bootstrap version, or bail out.
   //
-  if ($.fn.modal == undefined) {
+  if ($.fn.modal === undefined) {
     throw new Error('The bootstrap modal plugin does not appear to be loaded.')
   }
 
-  if ($.fn.modal.Constructor == undefined) {
+  if ($.fn.modal.Constructor === undefined) {
     throw new Error('The bootstrap modal plugin does not have a Constructor ?!?')
   }
 
-  if ($.fn.modal.Constructor.VERSION == undefined) {
+  if ($.fn.modal.Constructor.VERSION === undefined) {
     throw new Error('The bootstrap modal plugin does not have its version defined ?!?')
   }
 
@@ -112,7 +112,7 @@
   }
 
   const bootstrapVersion = parseInt(match[1])
-  if (bootstrapVersion != 3 && bootstrapVersion != 4) {
+  if (bootstrapVersion !== 3 && bootstrapVersion !== 4) {
     throw new Error(`Unsupported bootstrap version: ${bootstrapVersion}. data-confirm-modal supports version 3 and 4.`)
   }
 
@@ -150,7 +150,7 @@
     return modal
   }
 
-  var buildModal = options => {
+  const buildModal = options => {
     const id = `confirm-modal-${String(Math.random()).slice(2, -1)}`
     const fade = settings.fade ? 'fade' : ''
     const modalClass = options.modalClass ? options.modalClass : settings.modalClass
@@ -177,9 +177,20 @@
         break
     }
 
-    const modal = $(
-      `<div id="${id}" class="modal ${modalClass} ${fade}" tabindex="-1" role="dialog" aria-labelledby="${id}Label" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header">${modalHeader}</div><div class="modal-body"></div><div class="modal-footer"><button class="btn cancel" data-dismiss="modal" aria-hidden="true"></button><button class="btn commit"></button></div></div></div></div>`
-    )
+    const modal = $(`
+      <div id="${id}" class="modal ${modalClass} ${fade}" tabindex="-1" role="dialog" aria-labelledby="${id}Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">${modalHeader}</div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button class="btn cancel" data-dismiss="modal" aria-hidden="true"></button>
+              <button class="btn commit"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `)
 
     // Make sure it's always the top zindex
     let highest
@@ -225,7 +236,7 @@
 
         isMatch = input => input.match(re)
       } else {
-        isMatch = input => options.verify == input
+        isMatch = input => options.verify === input
       }
 
       const verification = $('<input/>', { type: 'text', class: settings.verifyClass }).on('keyup', function () {
@@ -245,18 +256,18 @@
       body.append(verification)
     }
 
-    let focus_element
+    let focusElement
     if (options.focus) {
-      focus_element = options.focus
-    } else if (options.method == 'delete') {
-      focus_element = 'cancel'
+      focusElement = options.focus
+    } else if (options.method === 'delete') {
+      focusElement = 'cancel'
     } else {
-      focus_element = settings.focus
+      focusElement = settings.focus
     }
-    focus_element = modal.find(`.${focus_element}`)
+    focusElement = modal.find(`.${focusElement}`)
 
     modal.on('shown.bs.modal', () => {
-      focus_element.focus()
+      focusElement.focus()
     })
 
     $('body').append(modal)
@@ -308,7 +319,7 @@
      * is briefly overriden, and afterwards reset when the modal is closed.
      *
      */
-    const window_confirm = window.confirm
+    const windowConfirm = window.confirm
 
     $(document).delegate(settings.elements.join(', '), 'confirm', function () {
       const modal = $(this).getConfirmModal()
@@ -324,7 +335,7 @@
 
         modal.one('hidden.bs.modal', () => {
           // Reset it after modal is closed.
-          window.confirm = window_confirm
+          window.confirm = windowConfirm
         })
 
         // Proceed with Rails' handlers
@@ -332,4 +343,6 @@
       }
     })
   }
+
+  window.dataConfirmModal = dataConfirmModal
 })(jQuery)
