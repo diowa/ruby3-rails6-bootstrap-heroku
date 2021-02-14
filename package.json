@@ -17,6 +17,7 @@
     "@rails/webpacker": "^5.2.1",
     "bootstrap": "^4.6.0",
     "data-confirm-modal": "^1.6.2",
+    "expose-loader": "^1.0.3",
     "exports-loader": "^1.1.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
@@ -43,7 +44,9 @@
       "/config"
     ],
     "globals": [
-      "$"
+      "$",
+      "jQuery",
+      "Rails"
     ]
   }
 }

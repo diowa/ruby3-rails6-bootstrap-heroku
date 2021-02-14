@@ -305,43 +305,26 @@
     return modal
   }
 
-  if (window.Rails || $.rails) {
-    /**
-     * Attaches to Rails' UJS adapter's 'confirm' event, triggered on elements
-     * having a `data-confirm` attribute set.
-     *
-     * If the modal is not visible, then it is spawned and the default Rails
-     * confirmation dialog is canceled.
-     *
-     * If the modal is visible, it means the handler is being called by the
-     * modal commit button click handler, as such the user has successfully
-     * clicked on the confirm button. In this case Rails' confirm function
-     * is briefly overriden, and afterwards reset when the modal is closed.
-     *
-     */
-    const windowConfirm = window.confirm
+  /**
+   * Override `Rails.confirm` dialog.
+   *
+   * If the modal is visible, it means that the handler is being called by the
+   * modal commit button click handler, as such the user has successfully
+   * clicked on the confirm button.
+   *
+   * If the modal is not visible, then it is spawned and the default Rails
+   * confirmation dialog is canceled.
+   *
+   */
+  Rails.confirm = function (message, el) {
+    const modal = $(el).getConfirmModal()
 
-    $(document).delegate(settings.elements.join(', '), 'confirm', function () {
-      const modal = $(this).getConfirmModal()
-
-      if (!modal.is(':visible')) {
-        modal.spawn()
-
-        // Cancel Rails' confirmation
-        return false
-      } else {
-        // Modal has been confirmed. Override Rails' handler
-        window.confirm = () => true
-
-        modal.one('hidden.bs.modal', () => {
-          // Reset it after modal is closed.
-          window.confirm = windowConfirm
-        })
-
-        // Proceed with Rails' handlers
-        return true
-      }
-    })
+    if (modal.is(':visible')) {
+      return true
+    } else {
+      modal.spawn()
+      return false
+    }
   }
 
   window.dataConfirmModal = dataConfirmModal

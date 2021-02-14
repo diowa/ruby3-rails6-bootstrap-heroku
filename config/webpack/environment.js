@@ -22,6 +22,8 @@ environment.plugins.prepend(
     // Bootstrap dependencies
     Popper: ['popper.js', 'default'],
 
+    Rails: ['@rails/ujs'],
+
     // Individual Bootstrap plugins
     Util:"exports-loader?Util!bootstrap/js/dist/util",
     Tooltip:"exports-loader?Tooltip!bootstrap/js/dist/tooltip",
