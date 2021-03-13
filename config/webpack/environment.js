@@ -17,7 +17,9 @@ environment.plugins.prepend(
     jquery: 'jquery',
 
     // Window
-    'window.jQuery': 'jquery'
+    'window.jQuery': 'jquery',
+
+    Rails: ['@rails/ujs']
   })
 )
 

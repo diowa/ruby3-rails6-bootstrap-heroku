@@ -7,7 +7,8 @@ import 'src/bootstrap.js'
 import 'src/fontawesome.js'
 
 require('@rails/ujs').start()
+
 require('turbolinks').start()
 require('@rails/activestorage').start()
 require('channels')
-require('data-confirm-modal')
+require('src/data-confirm-modal.js')
