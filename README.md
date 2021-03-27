@@ -8,7 +8,7 @@
 This is an opinionated starter web application based on the following technology stack:
 
 * [Ruby 3.0.0][1]
-* [Rails 6.1.3][2]
+* [Rails 6.1.3.1][2]
 * [Webpack 4][15]
 * [Yarn][16]
 * [Puma][3]
@@ -16,7 +16,7 @@ This is an opinionated starter web application based on the following technology
 * [RSpec][5]
 * [Bootstrap 4.6.0][8]
 * [Autoprefixer][9]
-* [Font Awesome 5.15.2 SVG][10]
+* [Font Awesome 5.15.3 SVG][10]
 * [Slim][11]
 * [RuboCop][12]
 * [RuboCop RSpec][17]
