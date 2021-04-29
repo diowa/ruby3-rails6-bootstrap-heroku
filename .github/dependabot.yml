@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rubocop-performance
+    versions:
+    - 1.10.1
+  - dependency-name: rails
+    versions:
+    - 6.1.2.1
+  - dependency-name: faker
+    versions:
+    - 2.16.0
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: webpack-cli
+    versions:
+    - ">= 4.a, < 5"
+  - dependency-name: "@fortawesome/free-regular-svg-icons"
+    versions:
+    - 5.15.3
+  - dependency-name: "@fortawesome/fontawesome-svg-core"
+    versions:
+    - 1.2.35
+  - dependency-name: jquery
+    versions:
+    - 3.6.0
+  - dependency-name: "@rails/ujs"
+    versions:
+    - 6.1.2
