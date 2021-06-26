@@ -1,5 +1,5 @@
 # Rails 6 Starter App
-[![Build Status](https://travis-ci.org/diowa/ruby3-rails6-bootstrap-heroku.svg?branch=main)](https://travis-ci.org/diowa/ruby3-rails6-bootstrap-heroku)
+[![Build Status](https://github.com/diowa/ruby3-rails6-bootstrap-heroku/actions/workflows/ci.yml/badge.svg)](https://github.com/diowa/ruby3-rails6-bootstrap-heroku/actions)
 [![Code Climate](https://codeclimate.com/github/diowa/ruby3-rails6-bootstrap-heroku/badges/gpa.svg)](https://codeclimate.com/github/diowa/ruby3-rails6-bootstrap-heroku)
 [![Coverage Status](https://coveralls.io/repos/github/diowa/ruby3-rails6-bootstrap-heroku/badge.svg?branch=main)](https://coveralls.io/github/diowa/ruby3-rails6-bootstrap-heroku?branch=main)
 
