@@ -6,6 +6,8 @@
 import 'src/bootstrap.js'
 import 'src/fontawesome.js'
 
+import 'src/datatables.js'
+
 require('@rails/ujs').start()
 require('turbolinks').start()
 require('@rails/activestorage').start()
