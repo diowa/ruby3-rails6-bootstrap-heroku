@@ -26,7 +26,6 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'webmock/rspec'
 
-Capybara.server = :puma, { Silent: true }
 WebMock.disable_net_connect! allow: %w[localhost 127.0.0.1 *.lvh.me lvh.me]
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
