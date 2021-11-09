@@ -27,6 +27,8 @@ gem 'slim-rails', '~> 3.3'
 # App monitoring
 gem 'newrelic_rpm', '~> 8.1'
 
+gem 'sidekiq', '~> 6.2.0'
+
 group :development, :test do
   gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.2'
