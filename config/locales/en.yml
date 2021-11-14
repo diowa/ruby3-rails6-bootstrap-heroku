@@ -35,3 +35,6 @@ en:
   shared:
     navbar:
       toggle_navigation: "Toggle Navigation"
+  routes:
+    newsletter_subscription: 'newsletter'
+    support_contact: 'contact'

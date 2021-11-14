@@ -1,3 +1,11 @@
+PATH
+  remote: ../route_translator
+  specs:
+    route_translator (11.0.0)
+      actionpack (>= 5.2, < 7.0)
+      activesupport (>= 5.2, < 7.0)
+      addressable (~> 2.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -304,6 +312,7 @@ DEPENDENCIES
   puma (~> 5.5)
   rack-timeout (~> 0.6.0)
   rails (= 6.1.4.1)
+  route_translator!
   rspec-rails (~> 5.0)
   rubocop (~> 1.22)
   rubocop-performance (~> 1.12)
