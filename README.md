@@ -13,6 +13,7 @@ This is an opinionated starter web application based on the following technology
 * [Yarn][16]
 * [Puma][3]
 * [PostgreSQL][4]
++ [Redis][18]
 * [RSpec][5]
 * [Bootstrap 5.1.2][8]
 * [Autoprefixer][9]
@@ -38,6 +39,7 @@ This is an opinionated starter web application based on the following technology
 [15]: https://webpack.js.org/
 [16]: https://yarnpkg.com/lang/en/
 [17]: https://github.com/backus/rubocop-rspec
+[18]: https://redis.io/
 
 Starter App is deployable on [Heroku](https://www.heroku.com/). Demo: https://ruby3-rails6-bootstrap-heroku.herokuapp.com/
 

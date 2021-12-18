@@ -37,7 +37,8 @@
   "addons": [
     "heroku-postgresql:hobby-dev",
     "papertrail",
-    "newrelic"
+    "newrelic",
+    "heroku-redis:hobby-dev"
   ],
   "buildpacks": [
     {

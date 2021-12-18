@@ -15,8 +15,8 @@ gem 'puma', '~> 5.5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.4'
 
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5.2'
+# Turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo-rails
+gem 'turbo-rails', '~> 0.9.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.9', require: false

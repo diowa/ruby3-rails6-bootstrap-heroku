@@ -12,7 +12,7 @@ html lang=I18n.locale.to_s data-default-lang=I18n.default_locale
     = csp_meta_tag
     = yield :head
 
-    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbo-track': 'reload'
 
     / Web App manifest
     link href='/manifest.json' rel='manifest'
@@ -21,8 +21,8 @@ html lang=I18n.locale.to_s data-default-lang=I18n.default_locale
 
     link href='launcher-icon-180.png' rel='apple-touch-icon' sizes='180x180'
 
-    / Placed at the top of the document 'cause of turbolinks
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    / Placed at the top of the document because of Turbo
+    = javascript_pack_tag 'application', 'data-turbo-track': 'reload'
 
   body
     == render 'shared/navbar'
