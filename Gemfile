@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
-gem 'rails', '6.1.4.3'
+gem 'rails', '6.1.4.4'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.2'
@@ -16,7 +16,7 @@ gem 'puma', '~> 5.5'
 gem 'webpacker', '~> 5.4'
 
 # Turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo-rails
-gem 'turbo-rails', '~> 0.9.0'
+gem 'turbo-rails', '~> 0.9.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.9', require: false
