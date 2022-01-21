@@ -34,6 +34,9 @@ module Ruby2Rails6BootstrapHeroku
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # SQL schema is required by Chronomodel
+    config.active_record.schema_format = :sql
+
     config.generators do |g|
       g.javascripts     false
       g.stylesheets     false
