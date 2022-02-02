@@ -23,7 +23,7 @@
     "resolve-url-loader": "^5.0.0"
   },
   "devDependencies": {
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "standard": "^16.0.4",
     "standard-loader": "^7.0.0",
     "stylelint": "^14.3.0",
