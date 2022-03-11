@@ -14,7 +14,7 @@
     "@hotwired/turbo-rails": "^7.1.1",
     "@popperjs/core": "^2.11.2",
     "@rails/actioncable": "6.1.4",
-    "@rails/activestorage": "6.1.4",
+    "@rails/activestorage": "6.1.5",
     "@rails/ujs": "6.1.4",
     "@rails/webpacker": "^5.4.3",
     "bootstrap": "^5.1.3",
