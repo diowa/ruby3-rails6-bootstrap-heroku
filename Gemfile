@@ -19,7 +19,7 @@ gem 'webpacker', '~> 5.4'
 gem 'turbo-rails', '~> 1.0'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '~> 1.10', require: false
+gem 'bootsnap', '~> 1.11', require: false
 
 # Template Engine
 gem 'slim-rails', '~> 3.4'
