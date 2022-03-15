@@ -22,7 +22,7 @@ gem 'turbo-rails', '~> 1.0'
 gem 'bootsnap', '~> 1.10', require: false
 
 # Template Engine
-gem 'slim-rails', '~> 3.3'
+gem 'slim-rails', '~> 3.4'
 
 # App monitoring
 gem 'newrelic_rpm', '~> 8.5'
