@@ -3,10 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": ">= 14.0.0 < 17",
+    "node": ">= 16.0.0 < 18",
     "yarn": "^1.21.1"
   },
   "dependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/runtime": "^7.17.7",
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
     "@fortawesome/free-brands-svg-icons": "^6.1.0",
     "@fortawesome/free-regular-svg-icons": "^6.1.0",
@@ -16,24 +20,44 @@
     "@rails/actioncable": "6.1.5",
     "@rails/activestorage": "6.1.5",
     "@rails/ujs": "6.1.5",
-    "@rails/webpacker": "^5.4.3",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-macros": "^3.1.0",
     "bootstrap": "^5.1.3",
-    "exports-loader": "^1.1.1",
+    "compression-webpack-plugin": "^9.2.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "exports-loader": "^3.1.0",
     "jquery": "^3.6.0",
-    "resolve-url-loader": "^5.0.0"
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "shakapacker": "6.1.1",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.70.0",
+    "webpack-assets-manifest": "^5.1.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
-    "postcss": "^8.4.11",
-    "standard": "^16.0.4",
-    "standard-loader": "^7.0.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "@types/express": "^4.17.13",
+    "@webpack-cli/serve": "^1.6.1",
+    "eslint": "^8.11.0",
+    "standard": "^16.0.3",
+    "standard-loader": "tagliala/standard-loader#update-snazzy",
     "stylelint": "^14.6.0",
     "stylelint-config-twbs-bootstrap": "^3.0.1",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.2.0",
-    "stylelint-webpack-plugin": "^2.3.2",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.3"
+    "stylelint-webpack-plugin": "^3.1.1",
+    "webpack-dev-server": "^4.7.4"
   },
   "standard": {
     "ignore": [
@@ -45,5 +69,21 @@
     "globals": [
       "$"
     ]
-  }
+  },
+  "babel": {
+    "presets": [
+      "./node_modules/shakapacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    ">= 0.5%",
+    "last 2 major versions",
+    "not dead",
+    "Chrome >= 60",
+    "Firefox >= 60",
+    "Firefox ESR",
+    "iOS >= 12",
+    "Safari >= 12",
+    "not Explorer <= 11"
+  ]
 }
