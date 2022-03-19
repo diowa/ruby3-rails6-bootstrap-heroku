@@ -89,7 +89,8 @@ CREATE TABLE public.units (
     name character varying NOT NULL,
     project_id bigint,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    value numeric(21,3)
 );
 
 
@@ -229,6 +230,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210112191553'),
 ('20210112191554'),
 ('20210112191555'),
-('20210112191556');
+('20210112191556'),
+('20220319113852');
 
 
