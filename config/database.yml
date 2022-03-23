@@ -83,4 +83,4 @@ production:
   <<: *default
   database: ruby3_rails6_bootstrap_heroku_production
   username: ruby3_rails6_bootstrap_heroku
-  password: <%= ENV['RUBY2_RAILS6_BOOTSTRAP_HEROKU_DATABASE_PASSWORD'] %>
+  password: <%= ENV['RUBY3_RAILS6_BOOTSTRAP_HEROKU_DATABASE_PASSWORD'] %>

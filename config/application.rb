@@ -21,7 +21,7 @@ require 'action_cable/engine'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Ruby2Rails6BootstrapHeroku
+module Ruby3Rails6BootstrapHeroku
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
