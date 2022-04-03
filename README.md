@@ -13,7 +13,7 @@ This is an opinionated starter web application based on the following technology
 * [Yarn][16]
 * [Puma][3]
 * [PostgreSQL][4]
-+ [Redis][18]
+* [Redis][18]
 * [RSpec][5]
 * [Bootstrap 5.1.3][8]
 * [Autoprefixer][9]
