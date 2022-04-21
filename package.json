@@ -50,7 +50,7 @@
     "@types/express": "^4.17.13",
     "@webpack-cli/serve": "^1.6.1",
     "eslint": "^8.13.0",
-    "standard": "^16.0.3",
+    "standard": "^17.0.0",
     "standard-loader": "^7.0.0",
     "stylelint": "^14.7.1",
     "stylelint-config-twbs-bootstrap": "^3.0.1",
