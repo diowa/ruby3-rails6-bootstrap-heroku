@@ -228,6 +228,101 @@ CREATE FUNCTION public.chronomodel_projects_update() RETURNS trigger
 
 
 --
+-- Name: chronomodel_sections_delete(); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION public.chronomodel_sections_delete() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+              DECLARE _now timestamp;
+              BEGIN
+                _now := timezone('UTC', now());
+
+                DELETE FROM history.sections
+                WHERE id = old.id AND validity = tsrange(_now, NULL);
+
+                UPDATE history.sections SET validity = tsrange(lower(validity), _now)
+                WHERE id = old.id AND upper_inf(validity);
+
+                DELETE FROM ONLY temporal.sections
+                WHERE id = old.id;
+
+                RETURN OLD;
+              END;
+            $$;
+
+
+--
+-- Name: chronomodel_sections_insert(); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION public.chronomodel_sections_insert() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+              BEGIN
+                            IF NEW.id IS NULL THEN
+              NEW.id := nextval('temporal.sections_id_seq');
+            END IF;
+
+
+                INSERT INTO temporal.sections ( id, "name", "articles_count" )
+                VALUES ( NEW.id, NEW."name", NEW."articles_count" );
+
+                INSERT INTO history.sections ( id, "name", "articles_count", validity )
+                VALUES ( NEW.id, NEW."name", NEW."articles_count", tsrange(timezone('UTC', now()), NULL) );
+
+                RETURN NEW;
+              END;
+            $$;
+
+
+--
+-- Name: chronomodel_sections_update(); Type: FUNCTION; Schema: public; Owner: -
+--
+
+CREATE FUNCTION public.chronomodel_sections_update() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+              DECLARE _now timestamp;
+              DECLARE _hid integer;
+              DECLARE _old record;
+              DECLARE _new record;
+              BEGIN
+                IF OLD IS NOT DISTINCT FROM NEW THEN
+                  RETURN NULL;
+                END IF;
+
+                _old := row(OLD."name");
+                _new := row(NEW."name");
+
+                IF _old IS NOT DISTINCT FROM _new THEN
+                  UPDATE ONLY temporal.sections SET ( "name", "articles_count" ) = ( NEW."name", NEW."articles_count" ) WHERE id = OLD.id;
+                  RETURN NEW;
+                END IF;
+
+                _now := timezone('UTC', now());
+                _hid := NULL;
+
+                SELECT hid INTO _hid FROM history.sections WHERE id = OLD.id AND lower(validity) = _now;
+
+                IF _hid IS NOT NULL THEN
+                  UPDATE history.sections SET ( "name", "articles_count" ) = ( NEW."name", NEW."articles_count" ) WHERE hid = _hid;
+                ELSE
+                  UPDATE history.sections SET validity = tsrange(lower(validity), _now)
+                  WHERE id = OLD.id AND upper_inf(validity);
+
+                  INSERT INTO history.sections ( id, "name", "articles_count", validity )
+                       VALUES ( OLD.id, NEW."name", NEW."articles_count", tsrange(_now, NULL) );
+                END IF;
+
+                UPDATE ONLY temporal.sections SET ( "name", "articles_count" ) = ( NEW."name", NEW."articles_count" ) WHERE id = OLD.id;
+
+                RETURN NEW;
+              END;
+            $$;
+
+
+--
 -- Name: chronomodel_units_delete(); Type: FUNCTION; Schema: public; Owner: -
 --
 
@@ -510,6 +605,48 @@ ALTER SEQUENCE history.projects_hid_seq OWNED BY history.projects.hid;
 
 
 --
+-- Name: sections; Type: TABLE; Schema: temporal; Owner: -
+--
+
+CREATE TABLE temporal.sections (
+    id bigint NOT NULL,
+    name character varying,
+    articles_count integer DEFAULT 0
+);
+
+
+--
+-- Name: sections; Type: TABLE; Schema: history; Owner: -
+--
+
+CREATE TABLE history.sections (
+    hid bigint NOT NULL,
+    validity tsrange NOT NULL,
+    recorded_at timestamp without time zone DEFAULT timezone('UTC'::text, now()) NOT NULL
+)
+INHERITS (temporal.sections);
+
+
+--
+-- Name: sections_hid_seq; Type: SEQUENCE; Schema: history; Owner: -
+--
+
+CREATE SEQUENCE history.sections_hid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: sections_hid_seq; Type: SEQUENCE OWNED BY; Schema: history; Owner: -
+--
+
+ALTER SEQUENCE history.sections_hid_seq OWNED BY history.sections.hid;
+
+
+--
 -- Name: units; Type: TABLE; Schema: temporal; Owner: -
 --
 
@@ -658,6 +795,24 @@ CREATE TABLE public.schema_migrations (
 
 
 --
+-- Name: sections; Type: VIEW; Schema: public; Owner: -
+--
+
+CREATE VIEW public.sections AS
+ SELECT sections.id,
+    sections.name,
+    sections.articles_count
+   FROM ONLY temporal.sections;
+
+
+--
+-- Name: VIEW sections; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON VIEW public.sections IS '{"temporal":true,"no_journal":["articles_count"],"chronomodel":"1.2.2"}';
+
+
+--
 -- Name: studios; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -766,6 +921,25 @@ ALTER SEQUENCE temporal.projects_id_seq OWNED BY temporal.projects.id;
 
 
 --
+-- Name: sections_id_seq; Type: SEQUENCE; Schema: temporal; Owner: -
+--
+
+CREATE SEQUENCE temporal.sections_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: sections_id_seq; Type: SEQUENCE OWNED BY; Schema: temporal; Owner: -
+--
+
+ALTER SEQUENCE temporal.sections_id_seq OWNED BY temporal.sections.id;
+
+
+--
 -- Name: units_id_seq; Type: SEQUENCE; Schema: temporal; Owner: -
 --
 
@@ -832,6 +1006,27 @@ ALTER TABLE ONLY history.projects ALTER COLUMN hid SET DEFAULT nextval('history.
 
 
 --
+-- Name: sections id; Type: DEFAULT; Schema: history; Owner: -
+--
+
+ALTER TABLE ONLY history.sections ALTER COLUMN id SET DEFAULT nextval('temporal.sections_id_seq'::regclass);
+
+
+--
+-- Name: sections articles_count; Type: DEFAULT; Schema: history; Owner: -
+--
+
+ALTER TABLE ONLY history.sections ALTER COLUMN articles_count SET DEFAULT 0;
+
+
+--
+-- Name: sections hid; Type: DEFAULT; Schema: history; Owner: -
+--
+
+ALTER TABLE ONLY history.sections ALTER COLUMN hid SET DEFAULT nextval('history.sections_hid_seq'::regclass);
+
+
+--
 -- Name: units id; Type: DEFAULT; Schema: history; Owner: -
 --
 
@@ -860,6 +1055,13 @@ ALTER TABLE ONLY history.users ALTER COLUMN hid SET DEFAULT nextval('history.use
 
 
 --
+-- Name: sections articles_count; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sections ALTER COLUMN articles_count SET DEFAULT 0;
+
+
+--
 -- Name: studios id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -878,6 +1080,13 @@ ALTER TABLE ONLY temporal.movies ALTER COLUMN id SET DEFAULT nextval('temporal.m
 --
 
 ALTER TABLE ONLY temporal.projects ALTER COLUMN id SET DEFAULT nextval('temporal.projects_id_seq'::regclass);
+
+
+--
+-- Name: sections id; Type: DEFAULT; Schema: temporal; Owner: -
+--
+
+ALTER TABLE ONLY temporal.sections ALTER COLUMN id SET DEFAULT nextval('temporal.sections_id_seq'::regclass);
 
 
 --
@@ -924,6 +1133,22 @@ ALTER TABLE ONLY history.projects
 
 ALTER TABLE ONLY history.projects
     ADD CONSTRAINT projects_timeline_consistency EXCLUDE USING gist (id WITH =, validity WITH &&);
+
+
+--
+-- Name: sections sections_pkey; Type: CONSTRAINT; Schema: history; Owner: -
+--
+
+ALTER TABLE ONLY history.sections
+    ADD CONSTRAINT sections_pkey PRIMARY KEY (hid);
+
+
+--
+-- Name: sections sections_timeline_consistency; Type: CONSTRAINT; Schema: history; Owner: -
+--
+
+ALTER TABLE ONLY history.sections
+    ADD CONSTRAINT sections_timeline_consistency EXCLUDE USING gist (id WITH =, validity WITH &&);
 
 
 --
@@ -999,6 +1224,14 @@ ALTER TABLE ONLY temporal.projects
 
 
 --
+-- Name: sections sections_pkey; Type: CONSTRAINT; Schema: temporal; Owner: -
+--
+
+ALTER TABLE ONLY temporal.sections
+    ADD CONSTRAINT sections_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: units units_pkey; Type: CONSTRAINT; Schema: temporal; Owner: -
 --
 
@@ -1054,6 +1287,27 @@ CREATE INDEX index_projects_temporal_on_upper_validity ON history.projects USING
 --
 
 CREATE INDEX index_projects_temporal_on_validity ON history.projects USING gist (validity);
+
+
+--
+-- Name: index_sections_temporal_on_lower_validity; Type: INDEX; Schema: history; Owner: -
+--
+
+CREATE INDEX index_sections_temporal_on_lower_validity ON history.sections USING btree (lower(validity));
+
+
+--
+-- Name: index_sections_temporal_on_upper_validity; Type: INDEX; Schema: history; Owner: -
+--
+
+CREATE INDEX index_sections_temporal_on_upper_validity ON history.sections USING btree (upper(validity));
+
+
+--
+-- Name: index_sections_temporal_on_validity; Type: INDEX; Schema: history; Owner: -
+--
+
+CREATE INDEX index_sections_temporal_on_validity ON history.sections USING gist (validity);
 
 
 --
@@ -1141,6 +1395,27 @@ CREATE INDEX projects_recorded_at ON history.projects USING btree (recorded_at);
 
 
 --
+-- Name: sections_inherit_pkey; Type: INDEX; Schema: history; Owner: -
+--
+
+CREATE INDEX sections_inherit_pkey ON history.sections USING btree (id);
+
+
+--
+-- Name: sections_instance_history; Type: INDEX; Schema: history; Owner: -
+--
+
+CREATE INDEX sections_instance_history ON history.sections USING btree (id, recorded_at);
+
+
+--
+-- Name: sections_recorded_at; Type: INDEX; Schema: history; Owner: -
+--
+
+CREATE INDEX sections_recorded_at ON history.sections USING btree (recorded_at);
+
+
+--
 -- Name: units_inherit_pkey; Type: INDEX; Schema: history; Owner: -
 --
 
@@ -1218,6 +1493,13 @@ CREATE TRIGGER chronomodel_delete INSTEAD OF DELETE ON public.projects FOR EACH 
 
 
 --
+-- Name: sections chronomodel_delete; Type: TRIGGER; Schema: public; Owner: -
+--
+
+CREATE TRIGGER chronomodel_delete INSTEAD OF DELETE ON public.sections FOR EACH ROW EXECUTE FUNCTION public.chronomodel_sections_delete();
+
+
+--
 -- Name: units chronomodel_delete; Type: TRIGGER; Schema: public; Owner: -
 --
 
@@ -1243,6 +1525,13 @@ CREATE TRIGGER chronomodel_insert INSTEAD OF INSERT ON public.movies FOR EACH RO
 --
 
 CREATE TRIGGER chronomodel_insert INSTEAD OF INSERT ON public.projects FOR EACH ROW EXECUTE FUNCTION public.chronomodel_projects_insert();
+
+
+--
+-- Name: sections chronomodel_insert; Type: TRIGGER; Schema: public; Owner: -
+--
+
+CREATE TRIGGER chronomodel_insert INSTEAD OF INSERT ON public.sections FOR EACH ROW EXECUTE FUNCTION public.chronomodel_sections_insert();
 
 
 --
@@ -1274,6 +1563,13 @@ CREATE TRIGGER chronomodel_update INSTEAD OF UPDATE ON public.projects FOR EACH 
 
 
 --
+-- Name: sections chronomodel_update; Type: TRIGGER; Schema: public; Owner: -
+--
+
+CREATE TRIGGER chronomodel_update INSTEAD OF UPDATE ON public.sections FOR EACH ROW EXECUTE FUNCTION public.chronomodel_sections_update();
+
+
+--
 -- Name: units chronomodel_update; Type: TRIGGER; Schema: public; Owner: -
 --
 
@@ -1301,6 +1597,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210112191556'),
 ('20220319113852'),
 ('20220319113855'),
-('20220320164521');
+('20220320164521'),
+('20220427150100');
 
 
