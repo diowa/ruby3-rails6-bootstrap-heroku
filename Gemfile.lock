@@ -1,8 +1,7 @@
-GIT
-  remote: https://github.com/ifad/chronomodel.git
-  revision: 76a354039bcb908f247d15aa18f3c80e75b82fde
+PATH
+  remote: ../ifad/chronomodel
   specs:
-    chrono_model (1.2.2)
+    chrono_model (2.0.0)
       activerecord (>= 5.0)
       multi_json
       pg (> 1.1)
