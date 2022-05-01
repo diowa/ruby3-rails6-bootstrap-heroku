@@ -44,22 +44,23 @@ COMMENT ON EXTENSION btree_gist IS 'support for indexing common datatypes in GiS
 CREATE FUNCTION public.chronomodel_movies_delete() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
-              DECLARE _now timestamp;
-              BEGIN
-                _now := timezone('UTC', now());
+    DECLARE _now timestamp;
+    BEGIN
+        _now := timezone('UTC', now());
 
-                DELETE FROM history.movies
-                WHERE id = old.id AND validity = tsrange(_now, NULL);
+        DELETE FROM history.movies
+        WHERE id = old.id AND validity = tsrange(_now, NULL);
 
-                UPDATE history.movies SET validity = tsrange(lower(validity), _now)
-                WHERE id = old.id AND upper_inf(validity);
+        UPDATE history.movies SET validity = tsrange(lower(validity), _now)
+        WHERE id = old.id AND upper_inf(validity);
 
-                DELETE FROM ONLY temporal.movies
-                WHERE id = old.id;
+        DELETE FROM ONLY temporal.movies
+        WHERE id = old.id;
 
-                RETURN OLD;
-              END;
-            $$;
+        RETURN OLD;
+    END;
+
+$$;
 
 
 --
@@ -69,21 +70,21 @@ CREATE FUNCTION public.chronomodel_movies_delete() RETURNS trigger
 CREATE FUNCTION public.chronomodel_movies_insert() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
-              BEGIN
-                            IF NEW.id IS NULL THEN
-              NEW.id := nextval('temporal.movies_id_seq');
-            END IF;
+    BEGIN
+        IF NEW.id IS NULL THEN
+            NEW.id := nextval('temporal.movies_id_seq');
+        END IF;
 
+        INSERT INTO temporal.movies ( id, "name", "created_at", "updated_at" )
+        VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at" );
 
-                INSERT INTO temporal.movies ( id, "name", "created_at", "updated_at" )
-                VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at" );
+        INSERT INTO history.movies ( id, "name", "created_at", "updated_at", validity )
+        VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(timezone('UTC', now()), NULL) );
 
-                INSERT INTO history.movies ( id, "name", "created_at", "updated_at", validity )
-                VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(timezone('UTC', now()), NULL) );
+        RETURN NEW;
+    END;
 
-                RETURN NEW;
-              END;
-            $$;
+$$;
 
 
 --
@@ -93,43 +94,44 @@ CREATE FUNCTION public.chronomodel_movies_insert() RETURNS trigger
 CREATE FUNCTION public.chronomodel_movies_update() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
-              DECLARE _now timestamp;
-              DECLARE _hid integer;
-              DECLARE _old record;
-              DECLARE _new record;
-              BEGIN
-                IF OLD IS NOT DISTINCT FROM NEW THEN
-                  RETURN NULL;
-                END IF;
+    DECLARE _now timestamp;
+    DECLARE _hid integer;
+    DECLARE _old record;
+    DECLARE _new record;
+    BEGIN
+        IF OLD IS NOT DISTINCT FROM NEW THEN
+            RETURN NULL;
+        END IF;
 
-                _old := row(OLD."name", OLD."created_at");
-                _new := row(NEW."name", NEW."created_at");
+        _old := row(OLD."name", OLD."created_at");
+        _new := row(NEW."name", NEW."created_at");
 
-                IF _old IS NOT DISTINCT FROM _new THEN
-                  UPDATE ONLY temporal.movies SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
-                  RETURN NEW;
-                END IF;
+        IF _old IS NOT DISTINCT FROM _new THEN
+            UPDATE ONLY temporal.movies SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
+            RETURN NEW;
+        END IF;
 
-                _now := timezone('UTC', now());
-                _hid := NULL;
+        _now := timezone('UTC', now());
+        _hid := NULL;
 
-                SELECT hid INTO _hid FROM history.movies WHERE id = OLD.id AND lower(validity) = _now;
+        SELECT hid INTO _hid FROM history.movies WHERE id = OLD.id AND lower(validity) = _now;
 
-                IF _hid IS NOT NULL THEN
-                  UPDATE history.movies SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE hid = _hid;
-                ELSE
-                  UPDATE history.movies SET validity = tsrange(lower(validity), _now)
-                  WHERE id = OLD.id AND upper_inf(validity);
+        IF _hid IS NOT NULL THEN
+            UPDATE history.movies SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE hid = _hid;
+        ELSE
+            UPDATE history.movies SET validity = tsrange(lower(validity), _now)
+            WHERE id = OLD.id AND upper_inf(validity);
 
-                  INSERT INTO history.movies ( id, "name", "created_at", "updated_at", validity )
-                       VALUES ( OLD.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(_now, NULL) );
-                END IF;
+            INSERT INTO history.movies ( id, "name", "created_at", "updated_at", validity )
+                VALUES ( OLD.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(_now, NULL) );
+        END IF;
 
-                UPDATE ONLY temporal.movies SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
+        UPDATE ONLY temporal.movies SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
 
-                RETURN NEW;
-              END;
-            $$;
+        RETURN NEW;
+    END;
+
+$$;
 
 
 --
@@ -139,22 +141,23 @@ CREATE FUNCTION public.chronomodel_movies_update() RETURNS trigger
 CREATE FUNCTION public.chronomodel_songs_delete() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
-              DECLARE _now timestamp;
-              BEGIN
-                _now := timezone('UTC', now());
+    DECLARE _now timestamp;
+    BEGIN
+        _now := timezone('UTC', now());
 
-                DELETE FROM history.songs
-                WHERE id = old.id AND validity = tsrange(_now, NULL);
+        DELETE FROM history.songs
+        WHERE id = old.id AND validity = tsrange(_now, NULL);
 
-                UPDATE history.songs SET validity = tsrange(lower(validity), _now)
-                WHERE id = old.id AND upper_inf(validity);
+        UPDATE history.songs SET validity = tsrange(lower(validity), _now)
+        WHERE id = old.id AND upper_inf(validity);
 
-                DELETE FROM ONLY temporal.songs
-                WHERE id = old.id;
+        DELETE FROM ONLY temporal.songs
+        WHERE id = old.id;
 
-                RETURN OLD;
-              END;
-            $$;
+        RETURN OLD;
+    END;
+
+$$;
 
 
 --
@@ -164,18 +167,17 @@ CREATE FUNCTION public.chronomodel_songs_delete() RETURNS trigger
 CREATE FUNCTION public.chronomodel_songs_insert() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
-              BEGIN
-                
+    BEGIN
+        INSERT INTO temporal.songs ( id, "name", "created_at", "updated_at" )
+        VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at" );
 
-                INSERT INTO temporal.songs ( id, "name", "created_at", "updated_at" )
-                VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at" );
+        INSERT INTO history.songs ( id, "name", "created_at", "updated_at", validity )
+        VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(timezone('UTC', now()), NULL) );
 
-                INSERT INTO history.songs ( id, "name", "created_at", "updated_at", validity )
-                VALUES ( NEW.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(timezone('UTC', now()), NULL) );
+        RETURN NEW;
+    END;
 
-                RETURN NEW;
-              END;
-            $$;
+$$;
 
 
 --
@@ -185,43 +187,44 @@ CREATE FUNCTION public.chronomodel_songs_insert() RETURNS trigger
 CREATE FUNCTION public.chronomodel_songs_update() RETURNS trigger
     LANGUAGE plpgsql
     AS $$
-              DECLARE _now timestamp;
-              DECLARE _hid integer;
-              DECLARE _old record;
-              DECLARE _new record;
-              BEGIN
-                IF OLD IS NOT DISTINCT FROM NEW THEN
-                  RETURN NULL;
-                END IF;
+    DECLARE _now timestamp;
+    DECLARE _hid integer;
+    DECLARE _old record;
+    DECLARE _new record;
+    BEGIN
+        IF OLD IS NOT DISTINCT FROM NEW THEN
+            RETURN NULL;
+        END IF;
 
-                _old := row(OLD."name", OLD."created_at");
-                _new := row(NEW."name", NEW."created_at");
+        _old := row(OLD."name", OLD."created_at");
+        _new := row(NEW."name", NEW."created_at");
 
-                IF _old IS NOT DISTINCT FROM _new THEN
-                  UPDATE ONLY temporal.songs SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
-                  RETURN NEW;
-                END IF;
+        IF _old IS NOT DISTINCT FROM _new THEN
+            UPDATE ONLY temporal.songs SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
+            RETURN NEW;
+        END IF;
 
-                _now := timezone('UTC', now());
-                _hid := NULL;
+        _now := timezone('UTC', now());
+        _hid := NULL;
 
-                SELECT hid INTO _hid FROM history.songs WHERE id = OLD.id AND lower(validity) = _now;
+        SELECT hid INTO _hid FROM history.songs WHERE id = OLD.id AND lower(validity) = _now;
 
-                IF _hid IS NOT NULL THEN
-                  UPDATE history.songs SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE hid = _hid;
-                ELSE
-                  UPDATE history.songs SET validity = tsrange(lower(validity), _now)
-                  WHERE id = OLD.id AND upper_inf(validity);
+        IF _hid IS NOT NULL THEN
+            UPDATE history.songs SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE hid = _hid;
+        ELSE
+            UPDATE history.songs SET validity = tsrange(lower(validity), _now)
+            WHERE id = OLD.id AND upper_inf(validity);
 
-                  INSERT INTO history.songs ( id, "name", "created_at", "updated_at", validity )
-                       VALUES ( OLD.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(_now, NULL) );
-                END IF;
+            INSERT INTO history.songs ( id, "name", "created_at", "updated_at", validity )
+                VALUES ( OLD.id, NEW."name", NEW."created_at", NEW."updated_at", tsrange(_now, NULL) );
+        END IF;
 
-                UPDATE ONLY temporal.songs SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
+        UPDATE ONLY temporal.songs SET ( "name", "created_at", "updated_at" ) = ( NEW."name", NEW."created_at", NEW."updated_at" ) WHERE id = OLD.id;
 
-                RETURN NEW;
-              END;
-            $$;
+        RETURN NEW;
+    END;
+
+$$;
 
 
 SET default_tablespace = '';
