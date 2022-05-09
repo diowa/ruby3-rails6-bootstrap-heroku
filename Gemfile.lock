@@ -68,7 +68,7 @@ GEM
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
-    capybara (3.36.0)
+    capybara (3.37.0)
       addressable
       matrix
       mini_mime (>= 0.1.3)
@@ -123,7 +123,7 @@ GEM
     msgpack (1.5.1)
     newrelic_rpm (8.7.0)
     nio4r (2.5.8)
-    nokogiri (1.13.4)
+    nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
@@ -291,7 +291,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (~> 1.11)
   byebug (~> 11.1)
-  capybara (~> 3.36)
+  capybara (~> 3.37)
   email_spec (~> 2.2)
   factory_bot_rails (~> 6.2)
   faker (~> 2.20)
