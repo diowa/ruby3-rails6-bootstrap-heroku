@@ -86,20 +86,7 @@
     browserslist "^4.20.2"
     semver "^6.3.0"
 
-"@babel/helper-create-class-features-plugin@^7.17.12":
-  version "7.17.12"
-  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.17.12.tgz#d4f8393fc4838cbff6b7c199af5229aee16d07cf"
-  integrity sha512-sZoOeUTkFJMyhqCei2+Z+wtH/BehW8NVKQt7IRUQlRiOARuXymJYfN/FCcI8CvVbR0XVyDM6eLFOlR7YtiXnew==
-  dependencies:
-    "@babel/helper-annotate-as-pure" "^7.16.7"
-    "@babel/helper-environment-visitor" "^7.16.7"
-    "@babel/helper-function-name" "^7.17.9"
-    "@babel/helper-member-expression-to-functions" "^7.17.7"
-    "@babel/helper-optimise-call-expression" "^7.16.7"
-    "@babel/helper-replace-supers" "^7.16.7"
-    "@babel/helper-split-export-declaration" "^7.16.7"
-
-"@babel/helper-create-class-features-plugin@^7.18.0":
+"@babel/helper-create-class-features-plugin@^7.17.12", "@babel/helper-create-class-features-plugin@^7.18.0":
   version "7.18.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.18.0.tgz#fac430912606331cb075ea8d82f9a4c145a4da19"
   integrity sha512-Kh8zTGR9de3J63e5nS0rQUdRs/kbtwoeQQ0sriS0lItjC96u8XXZN6lKpuyWd2coKSU13py/y+LTmThLuVX0Pg==
@@ -618,9 +605,9 @@
     "@babel/helper-plugin-utils" "^7.16.7"
 
 "@babel/plugin-transform-for-of@^7.17.12":
-  version "7.17.12"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-for-of/-/plugin-transform-for-of-7.17.12.tgz#5397c22554ec737a27918e7e7e0e7b679b05f5ec"
-  integrity sha512-76lTwYaCxw8ldT7tNmye4LLwSoKDbRCBzu6n/DcK/P3FOR29+38CIIaVIZfwol9By8W/QHORYEnYSLuvcQKrsg==
+  version "7.18.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-for-of/-/plugin-transform-for-of-7.18.1.tgz#ed14b657e162b72afbbb2b4cdad277bf2bb32036"
+  integrity sha512-+TTB5XwvJ5hZbO8xvl2H4XaMDOAK57zF4miuC9qQJgysPNEAZZ9Z69rdF5LJkozGdZrjBIUAIyKUWRMmebI7vg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.17.12"
 
@@ -933,9 +920,9 @@
     to-fast-properties "^2.0.0"
 
 "@csstools/postcss-cascade-layers@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@csstools/postcss-cascade-layers/-/postcss-cascade-layers-1.0.1.tgz#a41b391f1cd4dd952efc638cbad1d64509478d04"
-  integrity sha512-IpGtKHZ6XFj2cpRp9i45V/+fpcPv/W6Eybw7sFpqyVeCEH7UttHhrbop6JACESOhOYc/onTRb3tchHo/g3K4TA==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@csstools/postcss-cascade-layers/-/postcss-cascade-layers-1.0.2.tgz#7c48b5f773c4cdcdc6b57d6099fbdc2332e12219"
+  integrity sha512-n5fSd3N/RTLjwC6TLnHjlVEt5tRg6S6Pu+LpRgXayX0QVJHvlMzE3+R12cd2F0we8WB4OE8o5r5iWgmBPpqUyQ==
   dependencies:
     "@csstools/selector-specificity" "^1.0.0"
     postcss-selector-parser "^6.0.10"
@@ -1293,9 +1280,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "17.0.34"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.34.tgz#3b0b6a50ff797280b8d000c6281d229f9c538cef"
-  integrity sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA==
+  version "17.0.35"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.35.tgz#635b7586086d51fb40de0a2ec9d1014a5283ba4a"
+  integrity sha512-vu1SrqBjbbZ3J6vwY17jBs8Sr/BKA+/a/WtjRG+whKg1iuLFOosq872EXS0eXWILdO36DHQQeku/ZcL6hz2fpg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1991,10 +1978,10 @@ compressible@~2.0.16:
   dependencies:
     mime-db ">= 1.43.0 < 2"
 
-compression-webpack-plugin@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-10.0.0.tgz#3496af1b0dc792e13efc474498838dbff915c823"
-  integrity sha512-wLXLIBwpul/ALcm7Aj+69X0pYT3BYt6DdPn3qrgBIh9YejV9Bju9ShhlAsjujLyWMo6SAweFIWaUoFmXZNuNrg==
+compression-webpack-plugin@^9.0.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/compression-webpack-plugin/-/compression-webpack-plugin-9.2.0.tgz#57fd539d17c5907eebdeb4e83dcfe2d7eceb9ef6"
+  integrity sha512-R/Oi+2+UHotGfu72fJiRoVpuRifZT0tTC6UqFD/DUo+mv8dbOow9rVOuTvDv5nPPm3GZhHL/fKkwxwIHnJ8Nyw==
   dependencies:
     schema-utils "^4.0.0"
     serialize-javascript "^6.0.0"
@@ -4288,9 +4275,9 @@ postcss-clamp@^4.1.0:
     postcss-value-parser "^4.2.0"
 
 postcss-color-functional-notation@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/postcss-color-functional-notation/-/postcss-color-functional-notation-4.2.2.tgz#f59ccaeb4ee78f1b32987d43df146109cc743073"
-  integrity sha512-DXVtwUhIk4f49KK5EGuEdgx4Gnyj6+t2jBSEmxvpIK9QI40tWrpS2Pua8Q7iIZWBrki2QOaeUdEaLPPa91K0RQ==
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/postcss-color-functional-notation/-/postcss-color-functional-notation-4.2.3.tgz#23c9d73c76113b75473edcf66f443c6f1872bd0f"
+  integrity sha512-5fbr6FzFzjwHXKsVnkmEYrJYG8VNNzvD1tAXaPPWR97S6rhKI5uh2yOfV5TAzhDkZoq4h+chxEplFDc8GeyFtw==
   dependencies:
     postcss-value-parser "^4.2.0"
 
@@ -4548,9 +4535,9 @@ postcss-modules-values@^4.0.0:
     icss-utils "^5.0.0"
 
 postcss-nesting@^10.1.6:
-  version "10.1.6"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-10.1.6.tgz#9cd7221285577858a7cb38b94faabe4979226551"
-  integrity sha512-8C0X0pOOShlgqYkCzB4wlWLyulos+GXFpw7r2+x7g+ROQ1RwN8MlN2NCcpNQScNBPfbjxbjwY8e25raTcEXqmg==
+  version "10.1.7"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-10.1.7.tgz#0101bd6c7d386e7ad8e2e86ebcc0e0109833b86e"
+  integrity sha512-Btho5XzDTpl117SmB3tvUHP8txg5n7Ayv7vQ5m4b1zXkfs1Y52C67uZjZ746h7QvOJ+rLRg50OlhhjFW+IQY6A==
   dependencies:
     "@csstools/selector-specificity" "1.0.0"
     postcss-selector-parser "^6.0.10"
@@ -5236,10 +5223,10 @@ setprototypeof@1.2.0:
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
   integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
 
-shakapacker@6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/shakapacker/-/shakapacker-6.2.1.tgz#b59765ddf891f6f1e4e55a7816ef3925c6039ca3"
-  integrity sha512-Q8PSOVsaUlMCQiu9hw3vc6X2THMocxn/0cnmmHwkHw1V/RoxQhhh9DWEX2pmvUP+QlyY33q/UwuU6XbVf96AyA==
+shakapacker@6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/shakapacker/-/shakapacker-6.3.0.tgz#bca78307ab1a18eb9ba3d01b66c39e1fb898cdaa"
+  integrity sha512-u75erqMnpRH7IjRZWjyZD6W04569g53X7PLaWBolgrwTkNDXX28qbmICBRJNO3F4tOmuVaiWS6fhy3Awp0raew==
   dependencies:
     glob "^7.2.0"
     js-yaml "^4.1.0"
