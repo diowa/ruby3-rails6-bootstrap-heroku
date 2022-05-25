@@ -52,7 +52,7 @@
     "eslint": "^8.16.0",
     "standard": "^17.0.0",
     "standard-loader": "^7.0.0",
-    "stylelint": "^14.8.3",
+    "stylelint": "^14.8.4",
     "stylelint-config-twbs-bootstrap": "^3.0.1",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.2.0",
