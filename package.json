@@ -46,7 +46,7 @@
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-parser": "^7.18.2",
     "@types/express": "^4.17.13",
     "@webpack-cli/serve": "^1.6.1",
     "eslint": "^8.16.0",
