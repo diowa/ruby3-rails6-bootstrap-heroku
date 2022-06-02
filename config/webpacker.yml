@@ -7,6 +7,8 @@ default: &default
   public_output_path: packs
   cache_path: tmp/webpacker
   webpack_compile_output: true
+  # See https://github.com/shakacode/shakapacker#deployment
+  webpacker_precompile: true
 
   # Location for manifest.json, defaults to {public_output_path}/manifest.json if unset
   # manifest_path: public/packs/manifest.json
@@ -22,11 +24,15 @@ default: &default
   webpack_loader: 'babel'
 
   # Set to true to enable check for matching versions of shakapacker gem and NPM package - will raise an error if there is a mismatch or wildcard versioning is used
-  ensure_consistent_versioning: true
+  ensure_consistent_versioning: false
+
+  # Select whether the compiler will use SHA digest ('digest' option) or most most recent modified timestamp ('mtime') to determine freshness
+  compiler_strategy: digest
 
 development:
   <<: *default
   compile: true
+  compiler_strategy: mtime
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
@@ -42,7 +48,7 @@ development:
     # In that case, style-loader is not needed as a dependency.
     #
     # mini-extract-css-plugin is a required dependency in both cases.
-    inline_css: false
+    inline_css: true
     # Defaults to the inverse of hmr. Uncomment to manually set this.
     # live_reload: true
     client:
