@@ -53,7 +53,7 @@ end
 group :test do
   gem 'capybara', '~> 3.37'
   gem 'email_spec', '~> 2.2'
-  gem 'selenium-webdriver', '~> 4.3'
+  gem 'selenium-webdriver', '~> 4.4'
   gem 'simplecov', '~> 0.21.2', require: false
   gem 'simplecov-lcov', '~> 0.8.0', require: false
   gem 'webmock', '~> 3.17', require: false
