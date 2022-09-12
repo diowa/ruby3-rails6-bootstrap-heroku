@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.4'
-gem 'rails', '6.1.6.1'
+gem 'rails', '6.1.7'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.4'
@@ -13,7 +13,7 @@ gem 'pg', '~> 1.4'
 gem 'puma', '~> 5.6'
 
 # Transpile app-like JavaScript. Read more: https://github.com/shakacode/shakapacker
-gem 'shakapacker', '6.5.1'
+gem 'shakapacker', '6.5.2'
 
 # Turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo-rails
 gem 'turbo-rails', '~> 1.1'
@@ -36,8 +36,8 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 5.1'
   gem 'rubocop', '~> 1.36', require: false
-  gem 'rubocop-performance', '~> 1.14', require: false
-  gem 'rubocop-rails', '~> 2.15', require: false
+  gem 'rubocop-performance', '~> 1.15', require: false
+  gem 'rubocop-rails', '~> 2.16', require: false
   gem 'rubocop-rspec', '~> 2.12', require: false
   gem 'slim_lint', '~> 0.22.1', require: false
 end
