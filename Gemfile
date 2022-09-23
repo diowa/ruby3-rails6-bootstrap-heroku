@@ -16,7 +16,7 @@ gem 'puma', '~> 5.6'
 gem 'shakapacker', '6.5.2'
 
 # Turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo-rails
-gem 'turbo-rails', '~> 1.1'
+gem 'turbo-rails', '~> 1.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.13', require: false
