@@ -1,7 +1,7 @@
 PATH
   remote: ../ifad/chronomodel
   specs:
-    chrono_model (2.0.0)
+    chrono_model (1.2.2)
       activerecord (>= 5.0)
       multi_json
       pg (> 1.1)
