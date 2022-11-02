@@ -13,7 +13,7 @@ gem 'pg', '~> 1.4'
 gem 'puma', '~> 6.0'
 
 # Transpile app-like JavaScript. Read more: https://github.com/shakacode/shakapacker
-gem 'shakapacker', '6.5.2'
+gem 'shakapacker', '6.5.3'
 
 # Turbo makes navigating your web application faster. Read more: https://github.com/hotwired/turbo-rails
 gem 'turbo-rails', '~> 1.3'
