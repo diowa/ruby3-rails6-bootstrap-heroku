@@ -1,0 +1,52 @@
+name: Security Audits
+
+on:
+  schedule:
+    - cron: '30 8 * * 5'
+
+jobs:
+  bundle_audit:
+    name: Bundle audit
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1.2'
+        bundler-cache: false
+    - name: Bundle audit
+      run: |
+        gem install bundler-audit
+        bundle audit check --update
+
+  bundle_leak:
+    name: Bundle leak
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1.2'
+        bundler-cache: false
+    - name: Bundle leak
+      run: |
+        gem install bundler-leak
+        bundle leak check --update
+
+  yarn_audit:
+    name: Yarn audit
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - name: Yarn audit
+      run: |
+        yarn audit
