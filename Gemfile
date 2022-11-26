@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.4'
+ruby '3.0.5'
 gem 'rails', '6.1.7'
 
 # Use postgresql as the database for Active Record
@@ -19,7 +19,7 @@ gem 'shakapacker', '6.5.4'
 gem 'turbo-rails', '~> 1.3'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '~> 1.14', require: false
+gem 'bootsnap', '~> 1.15', require: false
 
 # Template Engine
 gem 'slim-rails', '~> 3.5'
