@@ -29,7 +29,7 @@
     "exports-loader": "^4.0.0",
     "jquery": "^3.6.3",
     "mini-css-extract-plugin": "^2.7.2",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.0.2",
