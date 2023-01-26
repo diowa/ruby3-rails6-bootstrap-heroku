@@ -19,7 +19,7 @@ gem 'shakapacker', '6.5.5'
 gem 'turbo-rails', '~> 1.3'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '~> 1.15', require: false
+gem 'bootsnap', '~> 1.16', require: false
 
 # Template Engine
 gem 'slim-rails', '~> 3.5'
