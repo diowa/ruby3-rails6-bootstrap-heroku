@@ -15,18 +15,7 @@ let customConfig = {
         ]
       }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      // jQuery
-      $: 'jquery',
-      jQuery: 'jquery',
-      jquery: 'jquery',
-
-      // Window
-      'window.jQuery': 'jquery'
-    })
-  ]
+  }
 }
 
 const path = resolve(__dirname, `${env.nodeEnv}.js`)
