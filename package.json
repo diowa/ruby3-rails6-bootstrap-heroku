@@ -27,7 +27,7 @@
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "exports-loader": "^4.0.0",
-    "jquery": "^3.6.3",
+    "jquery": "^3.6.4",
     "mini-css-extract-plugin": "^2.7.3",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
