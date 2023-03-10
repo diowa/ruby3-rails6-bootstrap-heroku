@@ -59,7 +59,7 @@ group :test do
   gem 'webmock', '~> 3.18', require: false
 end
 
-group :staging, :production do
+group :production do
   gem 'rack-timeout', '~> 0.6.3'
 end
 
