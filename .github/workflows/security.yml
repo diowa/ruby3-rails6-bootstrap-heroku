@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '30 8 * * 5'
 
+permissions:
+  contents: read
+
 jobs:
   bundle_audit:
     name: Bundle audit
