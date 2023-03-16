@@ -26,11 +26,11 @@
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "exports-loader": "^4.0.0",
-    "mini-css-extract-plugin": "^2.7.3",
+    "mini-css-extract-plugin": "^2.7.4",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^15.1.0",
-    "postcss-loader": "^7.0.2",
+    "postcss-loader": "^7.1.0",
     "postcss-preset-env": "^8.0.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.59.3",
@@ -55,7 +55,7 @@
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^4.5.0",
     "stylelint-webpack-plugin": "^4.1.0",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.12.0"
   },
   "standard": {
     "parser": "@babel/eslint-parser",
