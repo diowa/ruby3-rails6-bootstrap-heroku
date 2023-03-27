@@ -53,7 +53,7 @@
     "stylelint": "^15.3.0",
     "stylelint-config-twbs-bootstrap": "^8.0.0",
     "stylelint-order": "^6.0.3",
-    "stylelint-scss": "^4.5.0",
+    "stylelint-scss": "^4.6.0",
     "stylelint-webpack-plugin": "^4.1.0",
     "webpack-dev-server": "^4.12.0"
   },
