@@ -13,7 +13,7 @@
     "@babel/runtime": "^7.21.0",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
-    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@hotwired/turbo-rails": "^7.3.0",
     "@popperjs/core": "^2.11.7",
