@@ -35,7 +35,7 @@ group :development, :test do
   gem 'pry-byebug', '~> 3.10'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 6.0'
-  gem 'rubocop', '~> 1.48', require: false
+  gem 'rubocop', '~> 1.49', require: false
   gem 'rubocop-performance', '~> 1.16', require: false
   gem 'rubocop-rails', '~> 2.18', require: false
   gem 'rubocop-rspec', '~> 2.19', require: false
@@ -51,7 +51,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '~> 3.38'
+  gem 'capybara', '~> 3.39'
   gem 'email_spec', '~> 2.2'
   gem 'selenium-webdriver', '~> 4.8'
   gem 'simplecov', '~> 0.22.0', require: false
