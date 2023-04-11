@@ -60,7 +60,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    addressable (2.8.1)
+    addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bindex (0.8.1)
@@ -110,7 +110,7 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.19.1)
+    loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.8.1)
@@ -135,8 +135,8 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     newrelic_rpm (9.1.0)
-    nio4r (2.5.8)
-    nokogiri (1.14.2)
+    nio4r (2.5.9)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
@@ -211,7 +211,7 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.12.0)
-    rubocop (1.49.0)
+    rubocop (1.50.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.2.0.0)
@@ -325,7 +325,7 @@ DEPENDENCIES
   rack-timeout (~> 0.6.3)
   rails (= 6.1.7.3)
   rspec-rails (~> 6.0)
-  rubocop (~> 1.49)
+  rubocop (~> 1.50)
   rubocop-performance (~> 1.17)
   rubocop-rails (~> 2.19)
   rubocop-rspec (~> 2.19)
@@ -347,4 +347,4 @@ RUBY VERSION
    ruby 3.0.6p216
 
 BUNDLED WITH
-   2.4.10
+   2.4.11
