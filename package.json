@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "engines": {
-    "node": ">= 16.0.0 < 19",
+    "node": ">= 16.0.0",
     "yarn": "^1.21.1"
   },
   "dependencies": {
@@ -55,7 +55,7 @@
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^4.6.0",
     "stylelint-webpack-plugin": "^4.1.1",
-    "webpack-dev-server": "^4.13.1"
+    "webpack-dev-server": "^4.13.3"
   },
   "standard": {
     "parser": "@babel/eslint-parser",
