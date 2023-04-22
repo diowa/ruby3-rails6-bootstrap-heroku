@@ -10,7 +10,6 @@
       "except": ["after-same-name", "first-nested"],
       "ignore": ["after-comment"]
     }],
-    "stylistic/block-closing-brace-empty-line-before": "never",
     "declaration-empty-line-before": ["always", {
       "except": ["first-nested"],
       "ignore": ["after-comment", "after-declaration"]
@@ -19,6 +18,7 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     }],
-    "selector-class-pattern": "^[a-z][a-z0-9\\-_]*[a-z0-9]$"
+    "selector-class-pattern": "^[a-z][a-z0-9\\-_]*[a-z0-9]$",
+    "stylistic/block-closing-brace-empty-line-before": "never"
   }
 }
