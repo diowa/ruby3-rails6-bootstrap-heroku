@@ -1,4 +1,4 @@
-/* Full copy of bootstrap/scss/bootstrap.scss */
+/* Full copy of node_modules/bootstrap/scss/bootstrap.scss */
 
 @import "bootstrap/scss/mixins/banner";
 
@@ -7,6 +7,7 @@
 // Configuration
 @import "bootstrap/scss/functions";
 @import "bootstrap-variables";
+@import "bootstrap-variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";

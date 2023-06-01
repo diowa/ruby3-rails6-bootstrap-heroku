@@ -10,7 +10,7 @@ gem 'rails', '6.1.7.3'
 gem 'pg', '~> 1.4.6'
 
 # Use Puma as the app server
-gem 'puma', '~> 6.2'
+gem 'puma', '~> 6.3'
 
 # Transpile app-like JavaScript. Read more: https://github.com/shakacode/shakapacker
 gem 'shakapacker', '6.6.0'
