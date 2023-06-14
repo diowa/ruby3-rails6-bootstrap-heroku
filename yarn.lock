@@ -1377,7 +1377,7 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz#d7c6e6755c78567a951e04ab52ef0fd26de59f32"
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
 
-"@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.9":
+"@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.18", "@jridgewell/trace-mapping@^0.3.9":
   version "0.3.18"
   resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.18.tgz#25783b2086daf6ff1dcb53c9249ae480e4dd4cd6"
   integrity sha512-w+niJYzMHdd7USdiH2U6869nqhD2nbfZXND5Yp93qIbEmnDNk7PD48o+YchRVpzMU7M6jVCbenTR7PA1FLQ9pA==
@@ -2455,17 +2455,17 @@ css-loader@^6.8.1:
     postcss-value-parser "^4.2.0"
     semver "^7.3.8"
 
-css-minimizer-webpack-plugin@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/css-minimizer-webpack-plugin/-/css-minimizer-webpack-plugin-5.0.0.tgz#a2c2d1bc5cc37450519e873e13d942bbe4478ef5"
-  integrity sha512-1wZ/PYvg+ZKwi5FX6YrvbB31jMAdurS+CmRQLwWCVSlfzJC85l/a6RVICqUHFa+jXyhilfnCyjafzJGbmz5tcA==
+css-minimizer-webpack-plugin@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/css-minimizer-webpack-plugin/-/css-minimizer-webpack-plugin-5.0.1.tgz#33effe662edb1a0bf08ad633c32fa75d0f7ec565"
+  integrity sha512-3caImjKFQkS+ws1TGcFn0V1HyDJFq1Euy589JlD6/3rV2kj+w7r5G9WDMgSHvpvXHNZ2calVypZWuEDQd9wfLg==
   dependencies:
-    cssnano "^6.0.0"
+    "@jridgewell/trace-mapping" "^0.3.18"
+    cssnano "^6.0.1"
     jest-worker "^29.4.3"
-    postcss "^8.4.21"
-    schema-utils "^4.0.0"
+    postcss "^8.4.24"
+    schema-utils "^4.0.1"
     serialize-javascript "^6.0.1"
-    source-map "^0.6.1"
 
 css-prefers-color-scheme@^8.0.2:
   version "8.0.2"
@@ -2554,7 +2554,7 @@ cssnano-utils@^4.0.0:
   resolved "https://registry.yarnpkg.com/cssnano-utils/-/cssnano-utils-4.0.0.tgz#d1da885ec04003ab19505ff0e62e029708d36b08"
   integrity sha512-Z39TLP+1E0KUcd7LGyF4qMfu8ZufI0rDzhdyAMsa/8UyNUU8wpS0fhdBxbQbv32r64ea00h4878gommRVg2BHw==
 
-cssnano@^6.0.0:
+cssnano@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-6.0.1.tgz#87c38c4cd47049c735ab756d7e77ac3ca855c008"
   integrity sha512-fVO1JdJ0LSdIGJq68eIxOqFpIJrZqXUsBt8fkrBcztCQqAjQD51OhZp7tc0ImcbwXD4k7ny84QTV90nZhmqbkg==
@@ -5720,7 +5720,7 @@ schema-utils@^3.0, schema-utils@^3.1.1, schema-utils@^3.1.2:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
-schema-utils@^4.0.0:
+schema-utils@^4.0.0, schema-utils@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.1.0.tgz#4cff1e434c12ed39502378b9a3e24787b37df41d"
   integrity sha512-Jw+GZVbP5IggB2WAn6UHI02LBwGmsIeYN/lNbSMZyDziQ7jmtAUrqKqDja+W89YHVs+KL/3IkIMltAklqB1vAw==
