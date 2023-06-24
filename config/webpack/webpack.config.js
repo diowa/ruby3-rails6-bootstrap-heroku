@@ -1,4 +1,4 @@
-const { env, webpackConfig, merge } = require('shakapacker')
+const { env, generateWebpackConfig, merge } = require('shakapacker')
 const { existsSync } = require('fs')
 const { resolve } = require('path')
 
@@ -26,4 +26,5 @@ if (existsSync(path)) {
   customConfig = merge(customConfig, envSpecificConfig)
 }
 
+const webpackConfig = generateWebpackConfig()
 module.exports = merge(webpackConfig, customConfig)

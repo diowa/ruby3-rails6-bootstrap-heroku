@@ -105,6 +105,7 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
+    language_server-protocol (3.17.0.3)
     launchy (2.5.2)
       addressable (~> 2.8)
     listen (3.8.0)
@@ -213,8 +214,9 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.0)
-    rubocop (1.52.1)
+    rubocop (1.53.0)
       json (~> 2.3)
+      language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
@@ -247,7 +249,7 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
-    shakapacker (6.6.0)
+    shakapacker (7.0.0)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -285,7 +287,7 @@ GEM
     temple (0.10.2)
     thor (1.2.2)
     tilt (2.2.0)
-    timeout (0.3.2)
+    timeout (0.4.0)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -315,38 +317,38 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (~> 1.16)
-  byebug (~> 11.1)
-  capybara (~> 3.39)
-  email_spec (~> 2.2)
-  factory_bot_rails (~> 6.2)
-  faker (~> 3.2)
-  listen (~> 3.8)
+  byebug
+  capybara
+  email_spec
+  factory_bot_rails
+  faker
+  listen
   newrelic_rpm (~> 9.2)
   pg (~> 1.4.6)
-  pry (~> 0.14.2)
-  pry-byebug (~> 3.10)
-  pry-rails (~> 0.3.9)
+  pry
+  pry-byebug
+  pry-rails
   puma (~> 6.3)
   rack-timeout (~> 0.6.3)
   rails (= 6.1.7.3)
-  rspec-rails (~> 6.0)
-  rubocop (~> 1.52)
-  rubocop-performance (~> 1.18)
-  rubocop-rails (~> 2.20)
-  rubocop-rspec (~> 2.22)
-  selenium-webdriver (~> 4.10)
-  shakapacker (= 6.6.0)
-  simplecov (~> 0.22.0)
-  simplecov-lcov (~> 0.8.0)
+  rspec-rails
+  rubocop
+  rubocop-performance
+  rubocop-rails
+  rubocop-rspec
+  selenium-webdriver
+  shakapacker (= 7.0.0)
+  simplecov
+  simplecov-lcov
   slim-rails (~> 3.6)
-  slim_lint (~> 0.24.0)
-  spring (~> 4.1)
-  spring-commands-rspec (~> 1.0)
-  spring-watcher-listen (~> 2.1)
+  slim_lint
+  spring
+  spring-commands-rspec
+  spring-watcher-listen
   turbo-rails (~> 1.4)
   tzinfo-data (~> 1.2019)
-  web-console (~> 4.2)
-  webmock (~> 3.18)
+  web-console
+  webmock
 
 RUBY VERSION
    ruby 3.0.6p216
