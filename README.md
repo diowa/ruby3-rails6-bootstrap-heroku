@@ -6,40 +6,40 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This is an opinionated starter web application based on the following technology stack:
+* [Ruby 3.0.6][:ruby-url]
+* [Rails 6.1.7.3][:ruby-on-rails-url]
+* [Webpack 5][:webpack-url] (via [Shakapacker][:shakapacker-url])
+* [Yarn][:yarn-url]
+* [Puma][:puma-url]
+* [PostgreSQL][:postgresql-url]
+* [Redis][:redis-url]
+* [RSpec][:rspec-url]
+* [Bootstrap 5.3.0][:bootstrap-url]
+* [Autoprefixer][:autoprefixer-url]
+* [Font Awesome 6.4.0 SVG][:fontawesome-url]
+* [Slim][:slim-url]
+* [RuboCop][:rubocop-url]
+* [RuboCop RSpec][:rubocop-rspec-url]
+* [Slim-Lint][:slim-lint-url]
+* [stylelint][:stylelint-url]
 
-* [Ruby 3.0.6][1]
-* [Rails 6.1.7.3][2]
-* [Webpack 5][15]
-* [Yarn][16]
-* [Puma][3]
-* [PostgreSQL][4]
-* [Redis][18]
-* [RSpec][5]
-* [Bootstrap 5.3.0][8]
-* [Autoprefixer][9]
-* [Font Awesome 6.4.0 SVG][10]
-* [Slim][11]
-* [RuboCop][12]
-* [RuboCop RSpec][17]
-* [Slim-Lint][13]
-* [stylelint][14]
-
-[1]: https://www.ruby-lang.org/en/
-[2]: https://rubyonrails.org/
-[3]: https://puma.io/
-[4]: https://www.postgresql.org/
-[5]: https://rspec.info/
-[8]: https://getbootstrap.com/
-[9]: https://github.com/postcss/autoprefixer
-[10]: https://fontawesome.com/
-[11]: http://slim-lang.com/
-[12]: https://github.com/bbatsov/rubocop
-[13]: https://github.com/sds/slim-lint
-[14]: https://stylelint.io/
-[15]: https://webpack.js.org/
-[16]: https://yarnpkg.com/lang/en/
-[17]: https://github.com/backus/rubocop-rspec
-[18]: https://redis.io/
+[:autoprefixer-url]: https://github.com/postcss/autoprefixer
+[:bootstrap-url]: https://getbootstrap.com/
+[:fontawesome-url]: https://fontawesome.com/
+[:postgresql-url]: https://www.postgresql.org/
+[:puma-url]: https://puma.io/
+[:redis-url]: https://redis.io/
+[:rspec-url]: https://rspec.info/
+[:rubocop-rspec-url]: https://github.com/backus/rubocop-rspec
+[:rubocop-url]: https://github.com/bbatsov/rubocop
+[:ruby-on-rails-url]: https://rubyonrails.org/
+[:ruby-url]: https://www.ruby-lang.org/en/
+[:shakapacker-url]: https://github.com/shakacode/shakapacker
+[:slim-lint-url]: https://github.com/sds/slim-lint
+[:slim-url]: http://slim-lang.com/
+[:stylelint-url]: https://stylelint.io/
+[:webpack-url]: https://webpack.js.org/
+[:yarn-url]: https://yarnpkg.com/lang/en/
 
 Starter App is deployable on [Heroku](https://www.heroku.com/). Demo: https://ruby3-rails6-bootstrap-heroku.herokuapp.com/
 
