@@ -42,6 +42,7 @@ group :test do
   gem 'capybara'
   gem 'email_spec'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'simplecov-lcov', require: false
   gem 'webmock', require: false
