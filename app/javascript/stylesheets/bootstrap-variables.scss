@@ -1,9 +1,10 @@
 // New variables
 
-$rails-red: #e00000 !default;
+$rails-red: #e00000;
 
 // Overrides
 
-$primary: $rails-red !default;
+$color-mode-type: media-query;
+$primary: $rails-red;
 
 @import "bootstrap/scss/variables";
