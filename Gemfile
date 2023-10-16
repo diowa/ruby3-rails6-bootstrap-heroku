@@ -13,7 +13,7 @@ gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 6.4'
 gem 'shakapacker', '7.1.0'
 gem 'slim-rails', '~> 3.6'
-gem 'turbo-rails', '~> 1.4'
+gem 'turbo-rails', '~> 1.5'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
