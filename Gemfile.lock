@@ -98,7 +98,7 @@ GEM
       railties (>= 5.0.0)
     faker (3.2.1)
       i18n (>= 1.8.11, < 2)
-    ffi (1.15.5)
+    ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.0.1)
@@ -127,14 +127,14 @@ GEM
     mini_portile2 (2.8.4)
     minitest (5.20.0)
     msgpack (1.7.2)
-    net-imap (0.3.7)
+    net-imap (0.4.1)
       date
       net-protocol
     net-pop (0.1.2)
       net-protocol
     net-protocol (0.2.1)
       timeout
-    net-smtp (0.3.3)
+    net-smtp (0.4.0)
       net-protocol
     newrelic_rpm (9.5.0)
     nio4r (2.5.9)
@@ -289,9 +289,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    temple (0.10.2)
+    temple (0.10.3)
     thor (1.2.2)
-    tilt (2.2.0)
+    tilt (2.3.0)
     timeout (0.4.0)
     turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
