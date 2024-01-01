@@ -11,7 +11,7 @@ gem 'bootsnap', '~> 1.17', require: false
 gem 'newrelic_rpm', '~> 9.6'
 gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 6.4'
-gem 'shakapacker', '7.1.0'
+gem 'shakapacker', '7.2.1'
 gem 'slim-rails', '~> 3.6'
 gem 'turbo-rails', '~> 1.5'
 
