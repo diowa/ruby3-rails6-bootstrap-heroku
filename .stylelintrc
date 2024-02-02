@@ -19,6 +19,6 @@
       "ignore": ["after-comment"]
     }],
     "selector-class-pattern": "^[a-z][a-z0-9\\-_]*[a-z0-9]$",
-    "stylistic/block-closing-brace-empty-line-before": "never"
+    "@stylistic/block-closing-brace-empty-line-before": "never"
   }
 }
