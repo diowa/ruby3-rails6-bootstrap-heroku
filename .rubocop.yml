@@ -12,6 +12,7 @@ AllCops:
   DisplayStyleGuide: true
   ExtraDetails: true
   Exclude:
+    - '.git/**/*'
     - 'bin/*'
     - 'db/**/*'
     - 'log/**/*'
