@@ -38,7 +38,7 @@
     "shakapacker": "7.2.2",
     "style-loader": "^3.3.4",
     "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.90.3",
+    "webpack": "^5.91.0",
     "webpack-assets-manifest": "^5.2.1",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.10.0"
@@ -58,7 +58,7 @@
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.2.1",
     "stylelint-webpack-plugin": "^5.0.0",
-    "webpack-dev-server": "^5.0.3"
+    "webpack-dev-server": "^5.0.4"
   },
   "babel": {
     "presets": [
