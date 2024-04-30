@@ -7,10 +7,10 @@
     "yarn": "^1.21.1"
   },
   "dependencies": {
-    "@babel/core": "^7.24.4",
+    "@babel/core": "^7.24.5",
     "@babel/plugin-transform-runtime": "^7.24.3",
-    "@babel/preset-env": "^7.24.4",
-    "@babel/runtime": "^7.24.4",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/runtime": "^7.24.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
@@ -44,7 +44,7 @@
     "webpack-merge": "^5.10.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.24.1",
+    "@babel/eslint-parser": "^7.24.5",
     "@types/express": "^4.17.21",
     "@webpack-cli/serve": "^2.0.4",
     "eslint": "^8.57.0",
