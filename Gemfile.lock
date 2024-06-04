@@ -80,7 +80,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     coderay (1.1.3)
-    concurrent-ruby (1.2.3)
+    concurrent-ruby (1.3.1)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -98,7 +98,7 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    faker (3.3.1)
+    faker (3.4.1)
       i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
     globalid (1.2.1)
