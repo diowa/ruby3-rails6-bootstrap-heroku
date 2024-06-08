@@ -7,7 +7,7 @@
 
 This is an opinionated starter web application based on the following technology stack:
 * [Ruby 3.0.7][:ruby-url]
-* [Rails 6.1.7.7][:ruby-on-rails-url]
+* [Rails 6.1.7.8][:ruby-on-rails-url]
 * [Webpack 5][:webpack-url] (via [Shakapacker][:shakapacker-url])
 * [Yarn][:yarn-url]
 * [Puma][:puma-url]
