@@ -4259,11 +4259,6 @@ kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-known-css-properties@^0.31.0:
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.31.0.tgz#5c8d9d8777b3ca09482b2397f6a241e5d69a1023"
-  integrity sha512-sBPIUGTNF0czz0mwGGUoKKJC8Q7On1GPbCSFPfyEsfHb2DyBG0Y4QtV+EVWpINSaiGKZblDNuF5AezxSgOhesQ==
-
 known-css-properties@^0.34.0:
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.34.0.tgz#ccd7e9f4388302231b3f174a8b1d5b1f7b576cea"
@@ -6578,7 +6573,7 @@ webpack-dev-server@^5.0.4:
     webpack-dev-middleware "^7.1.0"
     ws "^8.16.0"
 
-webpack-merge@^5.10.0, webpack-merge@^5.7.3:
+webpack-merge@^5.7.3:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.10.0.tgz#a3ad5d773241e9c682803abf628d4cd62b8a4177"
   integrity sha512-+4zXKdx7UnO+1jaN4l2lHVD+mFvnlZQP/6ljaJVb4SZiwIKeUnrT5l0gkT8z+n4hKpC+jpOv6O9R+gLtag7pSA==
@@ -6587,15 +6582,24 @@ webpack-merge@^5.10.0, webpack-merge@^5.7.3:
     flat "^5.0.2"
     wildcard "^2.0.0"
 
+webpack-merge@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-6.0.1.tgz#50c776868e080574725abc5869bd6e4ef0a16c6a"
+  integrity sha512-hXXvrjtx2PLYx4qruKl+kyRSLc52V+cCvMxRjmKwoA+CBbbF5GfIBtR6kCvl0fYGqTUPKB+1ktVmTHqMOzgCBg==
+  dependencies:
+    clone-deep "^4.0.1"
+    flat "^5.0.2"
+    wildcard "^2.0.1"
+
 webpack-sources@^3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.92.1:
-  version "5.92.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.92.1.tgz#eca5c1725b9e189cffbd86e8b6c3c7400efc5788"
-  integrity sha512-JECQ7IwJb+7fgUFBlrJzbyu3GEuNBcdqr1LD7IbSzwkSmIevTm8PF+wej3Oxuz/JFBUZ6O1o43zsPkwm1C4TmA==
+webpack@^5.93.0:
+  version "5.93.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.93.0.tgz#2e89ec7035579bdfba9760d26c63ac5c3462a5e5"
+  integrity sha512-Y0m5oEY1LRuwly578VqluorkXbvXKh7U3rLoQCEO04M97ScRr44afGVkI0FQFsXzysk5OgFAxjZAb9rsGQVihA==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^1.0.5"
@@ -6672,7 +6676,7 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
-wildcard@^2.0.0:
+wildcard@^2.0.0, wildcard@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/wildcard/-/wildcard-2.0.1.tgz#5ab10d02487198954836b6349f74fff961e10f67"
   integrity sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==
