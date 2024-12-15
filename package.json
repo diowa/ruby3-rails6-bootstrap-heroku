@@ -32,14 +32,14 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.0",
     "postcss-loader": "^8.1.1",
-    "postcss-preset-env": "^10.1.1",
+    "postcss-preset-env": "^10.1.2",
     "resolve-url-loader": "^5.0.0",
     "sass": "1.77.6",
-    "sass-loader": "^16.0.3",
+    "sass-loader": "^16.0.4",
     "shakapacker": "8.0.2",
     "style-loader": "^4.0.0",
-    "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.96.1",
+    "terser-webpack-plugin": "^5.3.11",
+    "webpack": "^5.97.1",
     "webpack-assets-manifest": "^5.2.1",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^6.0.1"
@@ -59,7 +59,7 @@
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.10.0",
     "stylelint-webpack-plugin": "^5.0.1",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.2.0"
   },
   "babel": {
     "presets": [
