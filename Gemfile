@@ -12,7 +12,7 @@ gem 'newrelic_rpm', '~> 9.16'
 gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 6.5'
 gem 'shakapacker', '8.0.2'
-gem 'slim-rails', '~> 3.6'
+gem 'slim-rails', '~> 3.7'
 gem 'turbo-rails', '~> 2.0'
 
 group :development, :test do
