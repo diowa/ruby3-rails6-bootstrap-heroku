@@ -8,10 +8,11 @@ ruby '3.1.6'
 gem 'rails', '6.1.7.10'
 
 gem 'bootsnap', '~> 1.18', require: false
+gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
 gem 'newrelic_rpm', '~> 9.16'
 gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 6.5'
-gem 'shakapacker', '8.0.2'
+gem 'shakapacker', '8.1.0'
 gem 'slim-rails', '~> 3.7'
 gem 'turbo-rails', '~> 2.0'
 
