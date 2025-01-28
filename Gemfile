@@ -8,7 +8,7 @@ ruby '3.1.6'
 gem 'rails', '6.1.7.10'
 
 gem 'bootsnap', '~> 1.18', require: false
-gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
+gem 'concurrent-ruby', '< 1.3.6' # rails/rails#54260
 gem 'newrelic_rpm', '~> 9.16'
 gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 6.5'

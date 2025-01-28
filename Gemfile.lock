@@ -82,7 +82,7 @@ GEM
     childprocess (5.1.0)
       logger (~> 1.5)
     coderay (1.1.3)
-    concurrent-ruby (1.3.4)
+    concurrent-ruby (1.3.5)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -341,7 +341,7 @@ DEPENDENCIES
   bootsnap (~> 1.18)
   byebug
   capybara
-  concurrent-ruby (< 1.3.5)
+  concurrent-ruby (< 1.3.6)
   email_spec
   factory_bot_rails
   faker
