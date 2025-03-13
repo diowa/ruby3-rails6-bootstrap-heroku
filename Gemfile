@@ -12,7 +12,7 @@ gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
 gem 'newrelic_rpm', '~> 9.17'
 gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 6.6'
-gem 'shakapacker', '8.1.0'
+gem 'shakapacker', '8.2.0'
 gem 'slim-rails', '~> 3.7'
 gem 'turbo-rails', '~> 2.0'
 
@@ -36,7 +36,7 @@ end
 
 group :development do
   gem 'listen'
-  gem 'spring'
+  gem 'spring', '~> 4.2.0' # TODO: investigate issue
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
   gem 'web-console'
