@@ -36,7 +36,7 @@ end
 
 group :development do
   gem 'listen'
-  gem 'spring'
+  gem 'spring', '~> 4.2.0' # TODO: investigate issue
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
   gem 'web-console'
