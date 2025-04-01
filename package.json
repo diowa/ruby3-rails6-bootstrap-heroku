@@ -54,12 +54,12 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.6.0",
     "eslint-webpack-plugin": "^5.0.0",
-    "stylelint": "16.16.0",
+    "stylelint": "16.17.0",
     "stylelint-config-twbs-bootstrap": "^16.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.11.1",
     "stylelint-webpack-plugin": "^5.0.1",
-    "webpack-dev-server": "^5.2.0"
+    "webpack-dev-server": "^5.2.1"
   },
   "babel": {
     "presets": [
