@@ -6,7 +6,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This is an opinionated starter web application based on the following technology stack:
-* [Ruby 3.1.6][:ruby-url]
+* [Ruby 3.1.7][:ruby-url]
 * [Rails 6.1.7.10][:ruby-on-rails-url]
 * [Webpack 5][:webpack-url] (via [Shakapacker][:shakapacker-url])
 * [Yarn][:yarn-url]
@@ -14,7 +14,7 @@ This is an opinionated starter web application based on the following technology
 * [PostgreSQL][:postgresql-url]
 * [Redis][:redis-url]
 * [RSpec][:rspec-url]
-* [Bootstrap 5.3.3][:bootstrap-url]
+* [Bootstrap 5.3.5][:bootstrap-url]
 * [Autoprefixer][:autoprefixer-url]
 * [Font Awesome 6.7.2 SVG][:fontawesome-url]
 * [Slim][:slim-url]
