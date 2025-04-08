@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '6.1.7.10'
+gem 'rails', '7.2.2.1'
 
 gem 'bootsnap', '~> 1.18', require: false
 gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
