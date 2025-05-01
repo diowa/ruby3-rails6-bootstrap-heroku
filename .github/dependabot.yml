@@ -13,6 +13,13 @@ updates:
       rubocop:
         patterns:
           - "rubocop*"
+    ignore:
+      - dependency-name: rails
+        versions: ">= 7.0.0"
+      - dependency-name: rspec-rails
+        versions: ">= 7.0.0"
+      - dependency-name: turbo-rails
+        versions: ">= 2.0.13"
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -31,3 +38,8 @@ updates:
       webpack:
         patterns:
           - "webpack*"
+    ignore:
+      - dependency-name: "@rails/*"
+        versions: ">= 7.0.0"
+      - dependency-name: "@types/express"
+        versions: ">= 5.0.0"
