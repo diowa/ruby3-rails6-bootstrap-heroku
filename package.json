@@ -22,7 +22,7 @@
     "@rails/activestorage": "6.1.710",
     "babel-loader": "^10.0.0",
     "babel-plugin-macros": "^3.1.0",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.6",
     "compression-webpack-plugin": "^11.1.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
