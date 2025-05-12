@@ -6295,14 +6295,14 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webpack-assets-manifest@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-6.0.2.tgz#1e376922b7e2f4846f60047a2fe5550c687927d1"
-  integrity sha512-L27ie/OYb+AHqHQzBJ3wGSm5IHRPPO0lsCNoYwDa8qL5rNkTfmNSRnyWQK6TLvL3wLhsrAcVbnM/S17A6gv0DA==
+webpack-assets-manifest@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-6.1.0.tgz#393073b39c04a27193573ff7fdd358c5ea9dec06"
+  integrity sha512-ZkuTdncJAmWrjt1IXMLePv+HGQPuVsYfvyaas4FmJiON2gX7ApP46DrqnU5Vm/PXcWbO3CyX2O9VuVdwAGVH8Q==
   dependencies:
     deepmerge "^4.3.1"
     lockfile "^1.0.4"
-    schema-utils "^4.3.0"
+    schema-utils "^4.3.2"
     tapable "^2.2.1"
 
 webpack-cli@^6.0.1:
@@ -6384,10 +6384,10 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.99.7:
-  version "5.99.7"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.99.7.tgz#60201c1ca66da046b07d006c2f6e0cc5e8a7bdba"
-  integrity sha512-CNqKBRMQjwcmKR0idID5va1qlhrqVUKpovi+Ec79ksW8ux7iS1+A6VqzfZXgVYCFRKl7XL5ap3ZoMpwBJxcg0w==
+webpack@^5.99.8:
+  version "5.99.8"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.99.8.tgz#dd31a020b7c092d30c4c6d9a4edb95809e7f5946"
+  integrity sha512-lQ3CPiSTpfOnrEGeXDwoq5hIGzSjmwD72GdfVzF7CQAI7t47rJG9eDWvcEkEn3CUQymAElVvDg3YNTlCYj+qUQ==
   dependencies:
     "@types/eslint-scope" "^3.7.7"
     "@types/estree" "^1.0.6"
