@@ -8,9 +8,9 @@
   },
   "packageManager": "yarn@1.22.22",
   "dependencies": {
-    "@babel/core": "^7.27.7",
-    "@babel/plugin-transform-runtime": "^7.27.4",
-    "@babel/preset-env": "^7.27.2",
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-transform-runtime": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
     "@babel/runtime": "^7.27.6",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -45,7 +45,7 @@
     "webpack-merge": "^6.0.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.27.5",
+    "@babel/eslint-parser": "^7.28.0",
     "@types/express": "^4.17.21",
     "@webpack-cli/serve": "^3.0.1",
     "eslint": "^8.57.1",
@@ -54,7 +54,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.6.0",
     "eslint-webpack-plugin": "^5.0.2",
-    "stylelint": "16.21.0",
+    "stylelint": "16.21.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
     "stylelint-order": "^7.0.0",
     "stylelint-scss": "^6.12.1",

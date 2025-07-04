@@ -100,7 +100,7 @@ GEM
     factory_bot_rails (6.5.0)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
-    faker (3.5.1)
+    faker (3.5.2)
       i18n (>= 1.8.11, < 2)
     ffi (1.17.2)
     ffi (1.17.2-x86_64-linux-gnu)
@@ -130,13 +130,13 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
-    matrix (0.4.2)
+    matrix (0.4.3)
     method_source (1.1.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
     minitest (5.25.5)
     msgpack (1.8.0)
-    net-imap (0.5.8)
+    net-imap (0.5.9)
       date
       net-protocol
     net-pop (0.1.2)
@@ -212,7 +212,7 @@ GEM
       ffi (~> 1.0)
     regexp_parser (2.10.0)
     rexml (3.4.1)
-    rspec-core (3.13.4)
+    rspec-core (3.13.5)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
