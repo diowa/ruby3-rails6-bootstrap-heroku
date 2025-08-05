@@ -16,7 +16,7 @@ This is an opinionated starter web application based on the following technology
 * [RSpec][:rspec-url]
 * [Bootstrap 5.3.6][:bootstrap-url]
 * [Autoprefixer][:autoprefixer-url]
-* [Font Awesome 6.7.2 SVG][:fontawesome-url]
+* [Font Awesome 7.0.0 SVG][:fontawesome-url]
 * [Slim][:slim-url]
 * [RuboCop][:rubocop-url]
 * [RuboCop RSpec][:rubocop-rspec-url]
