@@ -301,7 +301,7 @@ GEM
       rexml (~> 3.2)
       rubocop (>= 1.0, < 2.0)
       slim (>= 3.0, < 6.0)
-    spring (4.2.1)
+    spring (4.4.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
     spring-watcher-listen (2.1.0)
@@ -381,7 +381,7 @@ DEPENDENCIES
   simplecov-lcov
   slim-rails (~> 3.7)
   slim_lint
-  spring (~> 4.2.0)
+  spring (~> 4.4.0)
   spring-commands-rspec
   spring-watcher-listen
   turbo-rails (~> 2.0)
