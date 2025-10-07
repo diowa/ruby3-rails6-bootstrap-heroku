@@ -34,7 +34,7 @@ end
 
 group :development do
   gem 'listen'
-  gem 'spring'
+  gem 'spring', github: 'rails/spring'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
   gem 'web-console'
