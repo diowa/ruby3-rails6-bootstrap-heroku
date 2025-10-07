@@ -29,6 +29,10 @@ default: &default
   # Location for manifest.json, defaults to {public_output_path}/manifest.json if unset
   # manifest_path: public/packs/manifest.json
 
+  # Location for private server-side bundles (e.g., for SSR)
+  # These bundles are not served publicly, unlike public_output_path
+  # private_output_path: ssr-generated
+
   # Additional paths webpack should look up modules
   # ['app/assets', 'engine/foo/app/assets']
   additional_paths: []
@@ -36,13 +40,19 @@ default: &default
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
 
-  # Select loader to use, available options are 'babel' (default), 'swc' or 'esbuild'
-  webpack_loader: 'babel'
+  # Select JavaScript transpiler to use
+  # Available options: 'swc' (default, 20x faster), 'babel', or 'esbuild'
+  # Note: When using rspack, swc is used automatically regardless of this setting
+  javascript_transpiler: 'babel'
+
+  # Select assets bundler to use
+  # Available options: 'webpack' (default) or 'rspack'
+  assets_bundler: 'webpack'
 
   # Raises an error if there is a mismatch in the shakapacker gem and npm package being used
   ensure_consistent_versioning: true
 
-  # Select whether the compiler will use SHA digest ('digest' option) or most most recent modified timestamp ('mtime') to determine freshness
+  # Select whether the compiler will use SHA digest ('digest' option) or most recent modified timestamp ('mtime') to determine freshness
   compiler_strategy: digest
 
   # Select whether the compiler will always use a content hash and not just in production
@@ -54,6 +64,16 @@ default: &default
   # Here, you can set different asset_host per environment. Note that
   # SHAKAPACKER_ASSET_HOST will override both configurations.
   # asset_host: custom-path
+
+  # Utilizing webpack-subresource-integrity plugin, will generate integrity hashes for all entries in manifest.json
+  # https://github.com/waysact/webpack-subresource-integrity/tree/main/webpack-subresource-integrity
+  integrity:
+    enabled: false
+    # Which cryptographic function(s) to use, for generating the integrity hash(es). Default sha-384. Other possible values sha256, sha512
+    hash_functions: ["sha384"]
+    # Default "anonymous". Other possible value "use-credentials"
+    # https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#cross-origin_resource_sharing_and_subresource_integrity
+    cross_origin: "anonymous"
 
 development:
   <<: *default
@@ -71,7 +91,7 @@ development:
     # Hot Module Replacement updates modules while the application is running without a full reload
     # Used instead of the `hot` key in https://webpack.js.org/configuration/dev-server/#devserverhot
     hmr: false
-    # If HMR is on, CSS will by inlined by delivering it as part of the script payload via style-loader. Be sure
+    # If HMR is on, CSS will be inlined by delivering it as part of the script payload via style-loader. Be sure
     # that you add style-loader to your project dependencies.
     #
     # If you want to instead deliver CSS via <link> with the mini-css-extract-plugin, set inline_css to false.
@@ -114,7 +134,7 @@ production:
   # Production depends on precompilation of packs prior to booting for performance.
   compile: false
 
-  # Use content hash for naming assets. Cannot be overridden by for production.
+  # Use content hash for naming assets. Cannot be overridden in production.
   useContentHash: true
 
   # Cache manifest.json for performance
