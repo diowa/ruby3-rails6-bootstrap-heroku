@@ -26,5 +26,5 @@ export default {
   ScrollSpy,
   Tab,
   Toast,
-  Tooltip
+  Tooltip,
 }
