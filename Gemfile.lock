@@ -275,7 +275,7 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.1.0)
-    shakapacker (9.1.0)
+    shakapacker (9.2.0)
       activesupport (>= 5.2)
       package_json
       rack-proxy (>= 0.6.1)
@@ -375,7 +375,7 @@ DEPENDENCIES
   rubocop-rspec
   rubocop-rspec_rails
   selenium-webdriver
-  shakapacker (= 9.1.0)
+  shakapacker (= 9.2.0)
   shoulda-matchers
   simplecov
   simplecov-lcov
