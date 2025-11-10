@@ -6049,7 +6049,7 @@ sax@^1.4.1:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.4.2.tgz#c5e2f69e013e58bbdb4d8a97de319e236d6c68c6"
   integrity sha512-FySGAa0RGcFiN6zfrO9JvK1r7TB59xuzCcTHOBXBNoKgDejlOQCR2KL/FGk3/iDlsqyYg1ELZpOmlg09B01Czw==
 
-schema-utils@^4.0.0, schema-utils@^4.2.0, schema-utils@^4.3.0, schema-utils@^4.3.2, schema-utils@^4.3.3:
+schema-utils@^4.0.0, schema-utils@^4.2.0, schema-utils@^4.3.0, schema-utils@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.3.tgz#5b1850912fa31df90716963d45d9121fdfc09f46"
   integrity sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==
@@ -6654,7 +6654,7 @@ table@^6.9.0:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tapable@^2.2.0, tapable@^2.2.1, tapable@^2.2.3, tapable@^2.3.0:
+tapable@^2.2.0, tapable@^2.2.1, tapable@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.3.0.tgz#7e3ea6d5ca31ba8e078b560f0d83ce9a14aa8be6"
   integrity sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==
@@ -6922,15 +6922,15 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webpack-assets-manifest@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-6.3.0.tgz#27cc1c547291c5928a5604b6a44bf5fabb04ba68"
-  integrity sha512-UcjiDm66jLTchxcXnvUDLg8Eoje8wsbjiA30RPymfLhi9UIVH1xA6pmqw5DLHVelr8hlzkeE74ofOrQNMwNX5A==
+webpack-assets-manifest@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-6.4.0.tgz#e04b69394d2409a64f0cb11f00c49cab4a788540"
+  integrity sha512-7BDswzFlfqEP63E3uF5J1V4g4JYN0I5PQecFqLZ1OP9qVzlfzDaX4G4RK6GEeUYylv+W86dycbOkHHGfxKdLTA==
   dependencies:
     deepmerge "^4.3.1"
     lockfile "^1.0.4"
-    schema-utils "^4.3.2"
-    tapable "^2.2.3"
+    schema-utils "^4.3.3"
+    tapable "^2.3.0"
 
 webpack-cli@^6.0.1:
   version "6.0.1"
