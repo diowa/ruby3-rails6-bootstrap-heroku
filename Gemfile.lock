@@ -146,7 +146,7 @@ GEM
       timeout
     net-smtp (0.5.1)
       net-protocol
-    newrelic_rpm (9.22.0)
+    newrelic_rpm (9.23.0)
     nio4r (2.7.5)
     nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
@@ -359,7 +359,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   listen
-  newrelic_rpm (~> 9.21)
+  newrelic_rpm (~> 9.23)
   pg (~> 1.4.6)
   pry
   pry-byebug
