@@ -49,7 +49,7 @@
     "@babel/eslint-parser": "^7.28.5",
     "@types/express": "^5.0.6",
     "@webpack-cli/serve": "^3.0.1",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "eslint-webpack-plugin": "^5.0.2",
     "neostandard": "^0.12.2",
     "stylelint": "^16.26.1",
