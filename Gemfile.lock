@@ -87,7 +87,7 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
-    date (3.5.0)
+    date (3.5.1)
     diff-lcs (1.6.2)
     docile (1.4.1)
     email_spec (2.3.0)
@@ -110,7 +110,7 @@ GEM
     htmlentities (4.3.4)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    json (2.17.1)
+    json (2.18.0)
     language_server-protocol (3.17.0.5)
     launchy (3.1.1)
       addressable (~> 2.8)
@@ -121,7 +121,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
-    loofah (2.24.1)
+    loofah (2.25.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.9.0)
@@ -135,7 +135,7 @@ GEM
     method_source (1.1.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.26.2)
+    minitest (5.27.0)
     msgpack (1.8.0)
     net-imap (0.5.12)
       date
@@ -294,7 +294,7 @@ GEM
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
-    slim-rails (3.7.0)
+    slim-rails (4.0.0)
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (>= 3.0, < 6.0, != 5.0.0)
@@ -380,7 +380,7 @@ DEPENDENCIES
   shoulda-matchers
   simplecov
   simplecov-lcov
-  slim-rails (~> 3.7)
+  slim-rails (~> 4.0)
   slim_lint
   spring (~> 4.2.0)
   spring-commands-rspec
