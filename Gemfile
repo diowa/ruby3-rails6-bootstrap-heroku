@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '6.1.7.10'
 
-gem 'bootsnap', '~> 1.18', require: false
+gem 'bootsnap', '~> 1.20', require: false
 gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
 gem 'newrelic_rpm', '~> 9.21'
 gem 'pg', '~> 1.4.6'
@@ -34,7 +34,7 @@ end
 
 group :development do
   gem 'listen'
-  gem 'spring', '~> 4.2.0' # TODO: investigate issue
+  gem 'spring', '~> 4.2.0' # TODO: relax this dependency when a version of Spring containing rails/spring#737 will be released
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen'
   gem 'web-console'
