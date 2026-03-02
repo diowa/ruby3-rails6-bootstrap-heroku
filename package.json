@@ -51,7 +51,7 @@
     "@webpack-cli/serve": "^3.0.1",
     "eslint": "^9.39.2",
     "eslint-webpack-plugin": "^5.0.2",
-    "neostandard": "^0.12.2",
+    "neostandard": "^0.13.0",
     "stylelint": "^16.26.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
     "stylelint-order": "^7.0.1",
