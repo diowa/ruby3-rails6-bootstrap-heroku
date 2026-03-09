@@ -1,4 +1,10 @@
 version: 2
+multi-ecosystem-groups:
+  shakapacker:
+    schedule:
+      interval: daily
+      time: "04:00"
+    open-pull-requests-limit: 10
 updates:
   - package-ecosystem: github-actions
     directory: /
@@ -20,6 +26,9 @@ updates:
         versions: ">= 7.0.0"
       - dependency-name: turbo-rails
         versions: ">= 2.0.13"
+    patterns:
+      - "shakapacker"
+    multi-ecosystem-group: shakapacker
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -41,5 +50,6 @@ updates:
     ignore:
       - dependency-name: "@rails/*"
         versions: ">= 7.0.0"
-      - dependency-name: "@types/express"
-        versions: ">= 5.0.0"
+    patterns:
+      - "shakapacker"
+    multi-ecosystem-group: shakapacker
