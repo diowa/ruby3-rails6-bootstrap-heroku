@@ -2,8 +2,7 @@ version: 2
 multi-ecosystem-groups:
   shakapacker:
     schedule:
-      interval: daily
-      time: "04:00"
+      interval: weekly
     open-pull-requests-limit: 10
 updates:
   - package-ecosystem: github-actions
@@ -14,7 +13,6 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-    open-pull-requests-limit: 10
     groups:
       rubocop:
         patterns:
@@ -33,7 +31,6 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-    open-pull-requests-limit: 10
     groups:
       babel:
         patterns:
