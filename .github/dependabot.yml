@@ -9,10 +9,16 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 5
   - package-ecosystem: bundler
     directory: "/"
     schedule:
       interval: weekly
+    cooldown:
+      semver-patch-days: 5
+      semver-minor-days: 10
+      semver-major-days: 15
     groups:
       rubocop:
         patterns:
@@ -31,6 +37,10 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    cooldown:
+      semver-patch-days: 5
+      semver-minor-days: 10
+      semver-major-days: 15
     groups:
       babel:
         patterns:
