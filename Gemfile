@@ -5,11 +5,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '6.1.7.10'
 
-gem 'bootsnap', '~> 1.20', require: false
+gem 'bootsnap', '~> 1.24', require: false
 gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
 gem 'newrelic_rpm', '~> 10.0'
 gem 'pg', '~> 1.4.6'
-gem 'puma', '~> 7.1'
+gem 'puma', '~> 8.0'
 gem 'shakapacker', '10.0.0'
 gem 'slim-rails', '~> 4.0'
 gem 'turbo-rails', '~> 2.0'
