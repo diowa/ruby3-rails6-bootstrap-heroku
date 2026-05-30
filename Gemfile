@@ -10,7 +10,7 @@ gem 'concurrent-ruby', '< 1.3.5' # rails/rails#54260
 gem 'newrelic_rpm', '~> 10.0'
 gem 'pg', '~> 1.4.6'
 gem 'puma', '~> 8.0'
-gem 'shakapacker', '10.0.0'
+gem 'shakapacker', '10.1.0'
 gem 'slim-rails', '~> 4.0'
 gem 'turbo-rails', '~> 2.0'
 
