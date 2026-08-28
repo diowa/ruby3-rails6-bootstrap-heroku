@@ -35,6 +35,12 @@ default: &default
   public_output_path: packs
   cache_path: tmp/shakapacker
   webpack_compile_output: true
+
+  # Extra command-line flags passed to webpack/rspack when compiling.
+  # Do not include "--", Shakapacker wrapper flags, help/version flags, watch flags/forms, or managed flags.
+  # Example: ["--progress", "--fail-on-warnings"]
+  webpack_compile_flags: []
+
   # See https://github.com/shakacode/shakapacker#deployment
   shakapacker_precompile: true
 
@@ -53,13 +59,15 @@ default: &default
   cache_manifest: false
 
   # Select JavaScript transpiler to use
-  # Available options: 'swc' (default, 20x faster), 'babel', 'esbuild', or 'none'
+  # Available options: 'swc' (bundled default), 'babel', 'esbuild', or 'none'
+  # Webpack apps that omit this setting use the bundled SWC default when swc-loader is
+  # installed, but fall back to Babel with a warning when only Babel tooling is present.
   # Use 'none' when providing a completely custom webpack configuration
   # Note: When using rspack, swc is used automatically regardless of this setting
   javascript_transpiler: "babel"
 
   # Select assets bundler to use
-  # Available options: 'webpack' (default) or 'rspack'
+  # Available options: 'webpack' or 'rspack'
   assets_bundler: "webpack"
 
   # Path to the directory containing webpack/rspack config files
